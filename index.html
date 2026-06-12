@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Schlaukorb – Schlau sparen. Schlau kochen. Schlau planen.</title>
+  <meta name="description" content="Schlaukorb zeigt dir jede Woche alle Supermarkt-Angebote für dein Bundesland – mit günstigen Rezepten und smarter Einkaufsliste. 100 % kostenlos." />
+  <meta property="og:title" content="Schlaukorb – Schlau sparen. Schlau kochen. Schlau planen." />
+  <meta property="og:description" content="Alle Supermarkt-Angebote, Rezepte & Einkaufsliste in einem Korb. Kostenlos für iOS & Android." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://schlaukorb.app" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,600;12..96,800&display=swap" rel="stylesheet" />
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      font-family: 'Bricolage Grotesque', -apple-system, 'Segoe UI', sans-serif;
+      background: linear-gradient(160deg, #10B981 0%, #059669 100%);
+      color: #fff; min-height: 100vh;
+      display: flex; flex-direction: column;
+    }
+    main {
+      flex: 1; display: flex; flex-direction: column;
+      align-items: center; justify-content: center;
+      text-align: center; padding: 48px 20px;
+    }
+    .logo { font-size: 64px; line-height: 1; }
+    h1 { font-size: 44px; font-weight: 800; letter-spacing: -1px; margin: 16px 0 8px; }
+    .tagline { font-size: 20px; font-weight: 600; opacity: 0.95; margin-bottom: 28px; }
+    .features {
+      display: flex; gap: 12px; flex-wrap: wrap; justify-content: center;
+      margin-bottom: 36px;
+    }
+    .chip {
+      background: rgba(255,255,255,0.16); border: 1px solid rgba(255,255,255,0.25);
+      border-radius: 24px; padding: 8px 18px; font-size: 15px; font-weight: 600;
+    }
+    .badges { display: flex; gap: 14px; flex-wrap: wrap; justify-content: center; }
+    .badge {
+      display: flex; align-items: center; gap: 10px;
+      background: #0B1F18; color: #fff; text-decoration: none;
+      border-radius: 14px; padding: 12px 22px; min-width: 200px;
+      transition: transform 0.15s ease, box-shadow 0.15s ease;
+      box-shadow: 0 6px 20px rgba(0,0,0,0.18);
+      text-align: left;
+    }
+    .badge:hover { transform: translateY(-2px); box-shadow: 0 10px 28px rgba(0,0,0,0.25); }
+    .badge .icon { font-size: 26px; }
+    .badge .small { font-size: 11px; opacity: 0.75; display: block; }
+    .badge .big { font-size: 17px; font-weight: 700; }
+    .stores { margin-top: 36px; font-size: 14px; opacity: 0.85; }
+    footer {
+      padding: 20px; text-align: center; font-size: 13px;
+      background: rgba(0,0,0,0.12);
+    }
+    footer a { color: #fff; text-decoration: underline; opacity: 0.9; margin: 0 10px; }
+    @media (max-width: 480px) { h1 { font-size: 34px; } .tagline { font-size: 17px; } }
+  </style>
+</head>
+<body>
+  <main>
+    <div class="logo">🛒🦊</div>
+    <h1>Schlaukorb</h1>
+    <p class="tagline">Schlau sparen. Schlau kochen. Schlau planen.</p>
+
+    <div class="features">
+      <span class="chip">🔥 Alle Wochenangebote</span>
+      <span class="chip">🍳 Günstige Rezepte</span>
+      <span class="chip">📝 Smarte Einkaufsliste</span>
+      <span class="chip">💚 100 % kostenlos</span>
+    </div>
+
+    <div class="badges">
+      <a class="badge" href="https://play.google.com/store/apps/details?id=com.gert31.korbly">
+        <span class="icon">▶</span>
+        <span><span class="small">JETZT BEI</span><span class="big">Google Play</span></span>
+      </a>
+      <a class="badge" href="https://apps.apple.com/de/app/id6763761390">
+        <span class="icon"></span>
+        <span><span class="small">LADEN IM</span><span class="big">App Store</span></span>
+      </a>
+    </div>
+
+    <p class="stores">Lidl · REWE · Aldi Nord · Aldi Süd · Penny · Netto &amp; mehr — für alle 16 Bundesländer</p>
+  </main>
+
+  <footer>
+    <a href="/impressum/">Impressum</a>
+    <a href="/datenschutz/">Datenschutz</a>
+    <a href="mailto:hallo@schlaukorb.de">hallo@schlaukorb.de</a>
+    <div style="margin-top:8px; opacity:0.7;">© 2026 Schlaukorb</div>
+  </footer>
+</body>
+</html>
