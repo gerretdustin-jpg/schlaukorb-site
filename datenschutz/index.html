@@ -9,56 +9,198 @@
     body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; max-width: 800px; margin: 0 auto; padding: 24px 16px; color: #1a1a1a; line-height: 1.6; }
     h1 { color: #10B981; }
     h2 { margin-top: 32px; }
+    h3 { margin-top: 24px; font-size: 1.05rem; }
     a { color: #10B981; }
+    table { border-collapse: collapse; width: 100%; margin: 16px 0; font-size: 0.95rem; }
+    th, td { border: 1px solid #e2e8f0; padding: 8px 10px; text-align: left; vertical-align: top; }
+    th { background: #f0fdf4; }
+    .lead { background: #f0fdf4; border-left: 4px solid #10B981; padding: 12px 16px; margin: 20px 0; }
+    .wrap { overflow-x: auto; }
+    code { background: #f1f5f9; padding: 1px 5px; border-radius: 3px; font-size: 0.9em; }
   </style>
 </head>
 <body>
   <p><a href="/">&larr; Zurück zu Schlaukorb</a></p>
   <h1>Datenschutzerklärung – Schlaukorb</h1>
-  <p><strong>Zuletzt aktualisiert:</strong> Juni 2026</p>
+  <p><strong>Zuletzt aktualisiert:</strong> September 2026</p>
 
-  <p>Schlaukorb ("wir", "uns") betreibt die mobile App Schlaukorb (die "App") sowie diese Website. Diese Seite informiert Sie über unsere Richtlinien bezüglich der Erfassung, Nutzung und Weitergabe personenbezogener Daten.</p>
+  <div class="lead">
+    <p><strong>Kurzfassung:</strong> Schlaukorb hat keine Konten und kennt deinen Namen nicht. Wir fragen weder nach E-Mail-Adresse noch Telefonnummer, nutzen keinen GPS-Standort, keine Werbe-ID, keine Werbenetzwerke und keine fremden Tracking-Dienste. Wir verkaufen keine Daten und geben keine Daten zu Werbezwecken weiter.</p>
+    <p>Was wir verarbeiten, ist eine <strong>zufällige Geräte-Kennung</strong> und das, was du in der App tust – damit deine Pläne, deine Liste und dein Abo dir wieder zugeordnet werden können. Diese Kennung gilt rechtlich als personenbezogenes Datum, auch wenn wir dahinter keine Person erkennen können. Deshalb diese ausführliche Erklärung.</p>
+  </div>
 
   <h2>1. Verantwortlicher</h2>
   <p>
     Gerret Schnock<br />
     Feldblick 20<br />
     40880 Ratingen<br />
-    E-Mail: <a href="mailto:hallo@schlaukorb.de">hallo@schlaukorb.de</a>
+    Deutschland<br />
+    E-Mail: <a href="mailto:hallo@schlaukorb.app">hallo@schlaukorb.app</a>
   </p>
 
-  <h2>2. Die App: Keine Kontoerstellung erforderlich</h2>
-  <p>Schlaukorb erfordert keine Registrierung oder Kontoerstellung. Die App kann vollständig anonym genutzt werden.</p>
+  <h2>2. Kein Konto, keine Identität</h2>
+  <p>Schlaukorb erfordert keine Registrierung. Wir erheben weder Namen, Anschrift, Geburtsdatum, Telefonnummer noch – außer du gibst sie uns aktiv für eine Antwort – eine E-Mail-Adresse. Es gibt keinen Login und keine Möglichkeit für uns, ein Gerät einer realen Person zuzuordnen.</p>
+  <p>Damit die App funktioniert, vergibt sie beim ersten Start eine <strong>zufällig erzeugte Geräte-Kennung</strong> (eine UUID). Sie ist die einzige Klammer zwischen dir und deinen Daten: ohne sie könnten wir deinen gespeicherten Wochenplan, deine geteilte Einkaufsliste oder dein bezahltes Abo beim nächsten Start nicht wiederfinden.</p>
+  <p>Damit diese Kennung eine Neuinstallation übersteht – sonst wären gekaufte Abos und gespeicherte Pläne nach jedem Neuinstallieren verloren –, wird sie unter iOS im Schlüsselbund (Keychain) abgelegt und unter Android über die <code>ANDROID_ID</code> wiedergefunden. Die <code>ANDROID_ID</code> ist an die App-Signatur gebunden: sie identifiziert dein Gerät gegenüber Schlaukorb und gegenüber niemandem sonst. Sie wird nicht für Werbung genutzt und nicht weitergegeben.</p>
 
-  <h2>3. Datenerfassung in der App</h2>
-  <p>Schlaukorb erhebt <strong>keine personenbezogenen Daten</strong>. Wir speichern keine Namen, E-Mail-Adressen, Standortdaten oder andere persönliche Informationen auf unseren Servern.</p>
+  <h2>3. Welche Daten wir verarbeiten</h2>
+  <div class="wrap">
+  <table>
+    <tr><th>Daten</th><th>Wozu</th><th>Rechtsgrundlage</th></tr>
+    <tr>
+      <td><strong>Geräte-Kennung</strong> (zufällige UUID; unter Android zusätzlich die app-gebundene <code>ANDROID_ID</code> zur Wiederherstellung)</td>
+      <td>Zuordnung deiner Pläne, Einkaufsliste, Favoriten, Abo und Freikontingente</td>
+      <td>Art. 6 Abs. 1 lit. b DSGVO (Vertragserfüllung)</td>
+    </tr>
+    <tr>
+      <td><strong>Bundesland und – wenn du sie angibst – Postleitzahl</strong></td>
+      <td>Auswahl der richtigen Prospekt-Ausgabe. Viele Ketten haben regional unterschiedliche Angebote. Kein GPS, keine genaue Ortung.</td>
+      <td>Art. 6 Abs. 1 lit. b DSGVO</td>
+    </tr>
+    <tr>
+      <td><strong>Nutzungsereignisse</strong> (z.&nbsp;B. „Screen geöffnet“, „Produkt zur Liste hinzugefügt“, Suchbegriffe in der Prospektsuche, Absturzmeldungen) mit Zeitstempel und Geräte-Kennung</td>
+      <td>Eigene, selbst gehostete Statistik: erkennen, was benutzt wird und was abstürzt. Keine Werbe-, Profiling- oder Scoring-Zwecke.</td>
+      <td>Art. 6 Abs. 1 lit. f DSGVO (berechtigtes Interesse an einer funktionierenden App)</td>
+    </tr>
+    <tr>
+      <td><strong>Einkaufsliste und Wochenpläne</strong>, sofern du sie auf dem Server speicherst oder per Link teilst („Partner-Liste“)</td>
+      <td>Synchronisation zwischen Geräten und mit der Person, der du den Link gibst</td>
+      <td>Art. 6 Abs. 1 lit. b DSGVO</td>
+    </tr>
+    <tr>
+      <td><strong>Angaben zur Ernährung</strong>, die du im Planer auswählst oder einträgst – darunter Optionen wie „glutenfrei (Zöliakie)“, „laktosefrei“ oder eigene Ausschlüsse</td>
+      <td>Erstellung eines Plans, der diese Vorgaben einhält. Siehe Abschnitt 5.</td>
+      <td>Art. 6 Abs. 1 lit. b i.&nbsp;V.&nbsp;m. Art. 9 Abs. 2 lit. a DSGVO (ausdrückliche Einwilligung)</td>
+    </tr>
+    <tr>
+      <td><strong>Push-Token</strong> (eine vom Betriebssystem vergebene Zustelladresse) nebst Geräte-Kennung und Region</td>
+      <td>Wöchentliche Benachrichtigung über neue Angebote und Preisalarme – nur wenn du Mitteilungen erlaubt hast</td>
+      <td>Art. 6 Abs. 1 lit. a DSGVO (Einwilligung); jederzeit über die Systemeinstellungen widerrufbar</td>
+    </tr>
+    <tr>
+      <td><strong>Abo-Status</strong> (Kaufzeitpunkt, Laufzeit, Verlängerung) verknüpft mit der Geräte-Kennung</td>
+      <td>Freischaltung von Schlaukorb&nbsp;Plus. <strong>Zahlungsdaten sehen wir nie</strong> – die Zahlung läuft vollständig über Apple bzw. Google.</td>
+      <td>Art. 6 Abs. 1 lit. b DSGVO</td>
+    </tr>
+    <tr>
+      <td><strong>Feedback und Problemmeldungen</strong>: dein Text, optionale Sternebewertung, App-Version – und nur wenn du „Antwort per E-Mail“ aktivierst, deine E-Mail-Adresse</td>
+      <td>Beantwortung und Fehlerbehebung</td>
+      <td>Art. 6 Abs. 1 lit. a und lit. f DSGVO</td>
+    </tr>
+    <tr>
+      <td><strong>IP-Adresse</strong> in Server-Logs; bei den kostenlosen Rezept-Tauschen wird zusätzlich die erste IP gespeichert</td>
+      <td>Betrieb und Sicherheit des Servers, Missbrauchserkennung</td>
+      <td>Art. 6 Abs. 1 lit. f DSGVO</td>
+    </tr>
+  </table>
+  </div>
 
-  <h2>4. Lokal gespeicherte Daten</h2>
-  <p>Die folgenden Daten werden ausschließlich lokal auf Ihrem Gerät gespeichert und niemals an uns übertragen:</p>
+  <h2>4. Was auf deinem Gerät bleibt</h2>
+  <p>Nicht alles wandert zu uns. Rein lokal bleiben insbesondere: der Dunkelmodus und die übrigen Anzeigeeinstellungen, deine Favoriten, dein zuletzt gewählter Filter sowie eine lokale Einkaufsliste, solange du sie nicht teilst oder auf dem Server speicherst.</p>
+
+  <h2>5. Gesundheitsbezogene Angaben im Planer</h2>
+  <p>Wenn du im Wochenplaner eine Ernährungsvorgabe wie „glutenfrei (Zöliakie)“ oder „laktosefrei“ auswählst oder eine Zutat wegen einer Unverträglichkeit ausschließt, kann das eine Angabe über deine Gesundheit sein. Solche Daten sind nach Art.&nbsp;9 DSGVO besonders geschützt.</p>
+  <p>Wir verarbeiten sie ausschließlich, um den Plan zu erstellen, den du angefordert hast. Die Auswahl ist freiwillig, und die App ist ohne sie vollständig nutzbar. Indem du eine solche Vorgabe setzt und den Plan erstellst, willigst du in diese Verarbeitung ausdrücklich ein (Art.&nbsp;9 Abs.&nbsp;2 lit.&nbsp;a DSGVO). Du kannst die Vorgabe jederzeit wieder abwählen; gespeicherte Pläne kannst du in der App löschen.</p>
+  <p>Zur Erstellung des Plans wird deine Vorgabe zusammen mit den gewählten Märkten und der Region an Anthropic übermittelt (siehe Abschnitt 6). Es wird dabei <strong>keine Geräte-Kennung und kein sonstiges Identifikationsmerkmal mitgesendet</strong>.</p>
+  <p><strong>Wichtiger Hinweis:</strong> Schlaukorb ist kein Medizinprodukt und ersetzt keine ärztliche oder ernährungsmedizinische Beratung. Prüfe bei einer Allergie oder Unverträglichkeit immer die Angaben auf der Verpackung.</p>
+
+  <h2>6. Empfänger und Auftragsverarbeiter</h2>
+  <p>Wir geben keine Daten zu Werbezwecken weiter und verkaufen keine Daten. Für den Betrieb setzen wir folgende Dienstleister ein, die ausschließlich weisungsgebunden für uns tätig sind (Auftragsverarbeitung nach Art.&nbsp;28 DSGVO):</p>
+  <div class="wrap">
+  <table>
+    <tr><th>Dienst</th><th>Zweck</th><th>Was dorthin gelangt</th></tr>
+    <tr><td>Railway Corp., USA</td><td>Hosting von Server und Datenbank (Region EU)</td><td>Alle in Abschnitt 3 genannten Serverdaten</td></tr>
+    <tr><td>RevenueCat, Inc., USA</td><td>Verwaltung der Abonnements</td><td>Geräte-Kennung, Kauf- und Laufzeitdaten. Keine Zahlungsdaten.</td></tr>
+    <tr><td>Anthropic PBC, USA</td><td>Erstellung der Wochenpläne und Rezepte (Claude)</td><td>Deine Planvorgaben: Budget, Personenzahl, Märkte, Region, Ernährungsvorgaben. <strong>Ohne Geräte-Kennung.</strong></td></tr>
+    <tr><td>OpenAI, L.L.C., USA</td><td>Transkription der Tonspur beim Import eines Rezept-Videos – nur wenn du diese Funktion nutzt</td><td>Die Tonspur des von dir eingefügten Videolinks</td></tr>
+    <tr><td>650 Industries, Inc. (Expo), USA – sowie Apple bzw. Google für die Zustellung</td><td>Versand der Push-Nachrichten</td><td>Push-Token und Nachrichtentext</td></tr>
+    <tr><td>Resend, Inc., USA</td><td>Weiterleitung deines Feedbacks an unser Postfach</td><td>Nur der Feedback-Text samt der von dir angegebenen Antwortadresse</td></tr>
+    <tr><td>Apple Inc. / Google Ireland Ltd.</td><td>Abwicklung der Zahlung, App-Auslieferung</td><td>Die Zahlung läuft ausschließlich dort; wir erhalten nur die Information, dass ein Abo aktiv ist. Es gelten deren eigene Datenschutzerklärungen.</td></tr>
+    <tr><td>GitHub, Inc., USA</td><td>Hosting dieser Website (GitHub Pages)</td><td>Server-Logs beim Aufruf der Website, insbesondere IP-Adresse</td></tr>
+  </table>
+  </div>
+  <p><strong>Übermittlung in die USA:</strong> Einige dieser Anbieter verarbeiten Daten in den Vereinigten Staaten. Die Übermittlung erfolgt auf Grundlage der Standardvertragsklauseln der EU-Kommission (Art.&nbsp;46 Abs.&nbsp;2 lit.&nbsp;c DSGVO) beziehungsweise – soweit der Anbieter zertifiziert ist – des EU-US Data Privacy Framework (Art.&nbsp;45 DSGVO). Ein gleichwertiges Schutzniveau kann trotz dieser Garantien nicht in jedem Fall zugesichert werden; insbesondere ist ein Zugriff durch US-Behörden nicht vollständig auszuschließen.</p>
+
+  <h2>7. Was wir ausdrücklich nicht tun</h2>
   <ul>
-    <li>Einkaufsliste</li>
-    <li>Favoriten</li>
-    <li>App-Einstellungen (z.&nbsp;B. Bundesland, Dark Mode)</li>
+    <li>Keine Werbenetzwerke und keine Werbe-IDs (kein IDFA, keine Google Advertising ID).</li>
+    <li>Keine fremden Tracking- oder Analyse-Dienste (kein Google Analytics, kein Firebase Analytics, kein Meta-SDK). Unsere Statistik läuft auf unserem eigenen Server.</li>
+    <li>Kein Verkauf und keine Weitergabe von Daten an Dritte zu deren eigenen Zwecken.</li>
+    <li>Kein Zugriff auf Kontakte, Fotos, Mikrofon oder Kamera.</li>
+    <li>Keine GPS-Ortung. Die Region kommt aus deiner eigenen Auswahl.</li>
+    <li>Keine automatisierte Entscheidungsfindung mit rechtlicher Wirkung und kein Profiling im Sinne des Art.&nbsp;22 DSGVO.</li>
+    <li>Keine Verarbeitung von Zahlungsdaten – die sehen wir nie.</li>
   </ul>
 
-  <h2>5. Produktdaten</h2>
-  <p>Die in der App angezeigten Produktdaten (Preise, Angebote) werden von unserer API geladen. Diese Anfragen enthalten keine personenbezogenen Daten.</p>
+  <h2>8. Speicherdauer</h2>
+  <ul>
+    <li><strong>Nutzungsereignisse:</strong> 12 Monate, danach automatische Löschung.</li>
+    <li><strong>Push-Token:</strong> werden entfernt, wenn ein Gerät 60 Tage lang inaktiv war.</li>
+    <li><strong>Pläne, Einkaufslisten, Favoriten:</strong> bis du sie löschst oder eine Löschung anforderst.</li>
+    <li><strong>Abo-Daten:</strong> für die Dauer des Abos und anschließend, soweit handels- und steuerrechtliche Aufbewahrungsfristen dies erfordern.</li>
+    <li><strong>Feedback:</strong> bis die Anfrage erledigt ist, längstens 24 Monate.</li>
+    <li><strong>Server-Logs:</strong> in der Regel 30 Tage.</li>
+  </ul>
 
-  <h2>6. Diese Website</h2>
-  <p>Diese Website wird über GitHub Pages (GitHub Inc., 88 Colin P. Kelly Jr. St, San Francisco, CA 94107, USA) gehostet. Beim Aufruf der Website verarbeitet GitHub technisch notwendige Daten (insbesondere die IP-Adresse) in Server-Logfiles, um die Website auszuliefern und die Sicherheit des Dienstes zu gewährleisten (Rechtsgrundlage: Art. 6 Abs. 1 lit. f DSGVO). Wir selbst setzen auf dieser Website keine Cookies, keine Analyse-Tools und kein Tracking ein. Weitere Informationen: <a href="https://docs.github.com/en/site-policy/privacy-policies/github-general-privacy-statement" rel="noopener">GitHub Privacy Statement</a>.</p>
+  <h2>9. Deine Rechte</h2>
+  <p>Dir stehen nach der DSGVO die Rechte auf Auskunft (Art.&nbsp;15), Berichtigung (Art.&nbsp;16), Löschung (Art.&nbsp;17), Einschränkung der Verarbeitung (Art.&nbsp;18), Datenübertragbarkeit (Art.&nbsp;20) und Widerspruch (Art.&nbsp;21) zu. Erteilte Einwilligungen kannst du jederzeit mit Wirkung für die Zukunft widerrufen.</p>
+  <p>Außerdem hast du das Recht, dich bei einer Aufsichtsbehörde zu beschweren. Für uns zuständig ist die Landesbeauftragte für Datenschutz und Informationsfreiheit Nordrhein-Westfalen, Kavalleriestraße 2–4, 40213 Düsseldorf.</p>
 
-  <h2>7. Drittanbieter</h2>
-  <p>Wir verwenden keine Werbenetzwerke, keine Analyse-Tools (z.&nbsp;B. Google Analytics, Firebase) und keine Tracking-Dienste – weder in der App noch auf dieser Website.</p>
+  <h3>Auskunft und Löschung anfordern</h3>
+  <p>Weil wir keine Konten führen, können wir dich nur über deine Geräte-Kennung finden. Du findest sie in der App unter <strong>Einstellungen → Info → Meine ID</strong>; tippe lange darauf, um sie zu kopieren.</p>
+  <p>Schicke die Kennung an <a href="mailto:hallo@schlaukorb.app">hallo@schlaukorb.app</a> mit dem Stichwort <strong>Auskunft</strong> oder <strong>Löschung</strong>. Wir bearbeiten die Anfrage innerhalb eines Monats und löschen dann alle zu dieser Kennung gespeicherten Daten. Ein bestehendes Abo wird davon nicht berührt – das verwaltest du bei Apple beziehungsweise Google.</p>
+  <p>Da wir dich nicht identifizieren können, ist die Geräte-Kennung der einzige Nachweis. Ohne sie können wir eine Anfrage weder zuordnen noch beantworten (Art.&nbsp;11 Abs.&nbsp;2 DSGVO).</p>
 
-  <h2>8. Ihre Rechte</h2>
-  <p>Sie haben das Recht auf Auskunft, Berichtigung, Löschung und Einschränkung der Verarbeitung Ihrer personenbezogenen Daten sowie ein Beschwerderecht bei einer Datenschutz-Aufsichtsbehörde. Da wir keine personenbezogenen Daten speichern, laufen Auskunftsersuchen in der Regel ins Leere – kontaktieren Sie uns bei Fragen gerne unter <a href="mailto:hallo@schlaukorb.de">hallo@schlaukorb.de</a>.</p>
+  <h2>10. Diese Website</h2>
+  <p>Diese Website wird über GitHub Pages (GitHub, Inc., 88 Colin P. Kelly Jr. St, San Francisco, CA 94107, USA) gehostet. Beim Aufruf verarbeitet GitHub technisch notwendige Daten – insbesondere die IP-Adresse – in Server-Logfiles, um die Seite auszuliefern und den Dienst abzusichern (Art.&nbsp;6 Abs.&nbsp;1 lit.&nbsp;f DSGVO). Wir selbst setzen auf dieser Website keine Cookies, keine Analyse-Tools und kein Tracking ein. Weitere Informationen: <a href="https://docs.github.com/en/site-policy/privacy-policies/github-general-privacy-statement" rel="noopener">GitHub Privacy Statement</a>.</p>
 
-  <h2>9. Änderungen dieser Datenschutzerklärung</h2>
-  <p>Wir können diese Datenschutzerklärung von Zeit zu Zeit aktualisieren. Änderungen werden auf dieser Seite veröffentlicht.</p>
+  <h2>11. Kinder</h2>
+  <p>Schlaukorb richtet sich nicht an Kinder unter 16 Jahren. Wir erheben nicht wissentlich Daten von Kindern unter 16 Jahren.</p>
+
+  <h2>12. Änderungen dieser Datenschutzerklärung</h2>
+  <p>Wir aktualisieren diese Erklärung, wenn sich die Funktionen der App ändern. Die jeweils geltende Fassung findest du stets auf dieser Seite mit dem Datum der letzten Änderung.</p>
 
   <hr />
-  <p><em>Privacy Policy (English)</em></p>
-  <p>Schlaukorb does not collect any personal data. No account is required. Shopping lists, favorites, and settings are stored locally on your device only and never transmitted to our servers. We use no advertising networks, analytics tools, or tracking services. This website is hosted on GitHub Pages; GitHub processes technically necessary data (e.g. IP addresses) in server logs to deliver the site.</p>
-  <p>Contact: <a href="mailto:hallo@schlaukorb.de">hallo@schlaukorb.de</a></p>
+
+  <h2>Privacy Policy (English)</h2>
+  <p><strong>Last updated:</strong> September 2026</p>
+
+  <p><strong>In short:</strong> Schlaukorb has no accounts and does not know your name. We never ask for your email address or phone number, we do not use GPS, advertising identifiers, ad networks or any third-party tracking. We do not sell data and we do not share data for advertising.</p>
+  <p>What we do process is a <strong>randomly generated device identifier</strong> and what you do in the app, so your plans, your list and your subscription can be returned to you. Under the GDPR that identifier counts as personal data even though we cannot see a person behind it — which is why this policy is detailed.</p>
+
+  <h3>Controller</h3>
+  <p>Gerret Schnock, Feldblick 20, 40880 Ratingen, Germany — <a href="mailto:hallo@schlaukorb.app">hallo@schlaukorb.app</a></p>
+
+  <h3>What we process</h3>
+  <ul>
+    <li><strong>Device identifier</strong> — a random UUID created on first launch. On iOS it is kept in the Keychain and on Android recovered via <code>ANDROID_ID</code>, so that a reinstall does not lose your purchased subscription or saved plans. It is scoped to this app and is never used for advertising.</li>
+    <li><strong>Federal state and, if you enter it, postal code</strong> — to select the correct regional flyer edition. No GPS, no precise location.</li>
+    <li><strong>Usage events</strong> — screen views, items added to your list, flyer search terms, crash reports, with a timestamp and the device identifier. Self-hosted analytics only; no profiling, no advertising.</li>
+    <li><strong>Shopping lists and meal plans</strong> where you save them to the server or share them via link.</li>
+    <li><strong>Dietary preferences you select in the planner</strong>, which may include health information such as coeliac disease or lactose intolerance — see below.</li>
+    <li><strong>Push token</strong>, device identifier and region, only if you enable notifications.</li>
+    <li><strong>Subscription status</strong> linked to the device identifier. We never see payment details; billing runs entirely through Apple or Google.</li>
+    <li><strong>Feedback</strong> you send, including an email address only if you tick "reply by email".</li>
+    <li><strong>IP address</strong> in server logs, for operation and abuse prevention.</li>
+  </ul>
+
+  <h3>Health-related data</h3>
+  <p>Selecting a dietary option such as "gluten-free (coeliac)" may constitute health data under Article 9 GDPR. It is optional, the app is fully usable without it, and we process it solely to produce the plan you requested — on the basis of your explicit consent (Art. 9(2)(a) GDPR). It is sent to Anthropic to generate the plan <strong>without any device identifier attached</strong>. Schlaukorb is not a medical device; always check the packaging if you have an allergy or intolerance.</p>
+
+  <h3>Processors</h3>
+  <p>Railway (hosting, EU region), RevenueCat (subscriptions), Anthropic (plan generation), OpenAI (audio transcription, only when you import a recipe video), Expo with Apple and Google (push delivery), Resend (forwarding your feedback to us), Apple and Google (payments and distribution), GitHub Pages (this website). All act on our instructions under Article 28 GDPR. Transfers to the United States rely on the EU Commission's Standard Contractual Clauses or, where the provider is certified, the EU-US Data Privacy Framework.</p>
+
+  <h3>What we do not do</h3>
+  <p>No ad networks, no advertising identifiers, no third-party analytics or tracking SDKs, no sale of data, no access to contacts, photos, microphone or camera, no GPS, no automated decision-making with legal effect, and no handling of payment details.</p>
+
+  <h3>Retention</h3>
+  <p>Usage events: 12 months. Push tokens: removed after 60 days of inactivity. Plans, lists and favourites: until you delete them or request deletion. Subscription data: for the term of the subscription plus statutory retention periods. Feedback: up to 24 months. Server logs: around 30 days.</p>
+
+  <h3>Your rights and how to exercise them</h3>
+  <p>You have the rights of access, rectification, erasure, restriction, portability and objection under Articles 15–21 GDPR, and you may withdraw consent at any time. You may also lodge a complaint with a supervisory authority; ours is the Data Protection Commissioner of North Rhine-Westphalia, Kavalleriestraße 2–4, 40213 Düsseldorf, Germany.</p>
+  <p>Because we hold no accounts, your device identifier is the only way we can find your data. You will find it in the app under <strong>Settings → Info → Meine ID</strong>. Send it to <a href="mailto:hallo@schlaukorb.app">hallo@schlaukorb.app</a> with the word <strong>access</strong> or <strong>deletion</strong>. We respond within one month. Without the identifier we cannot locate or answer a request (Art. 11(2) GDPR).</p>
+
+  <h3>Children</h3>
+  <p>Schlaukorb is not directed at children under 16, and we do not knowingly collect their data.</p>
 </body>
 </html>
