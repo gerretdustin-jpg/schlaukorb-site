@@ -25,8 +25,8 @@
   <p><strong>Zuletzt aktualisiert:</strong> September 2026</p>
 
   <div class="lead">
-    <p><strong>Kurzfassung:</strong> Schlaukorb hat keine Konten und kennt deinen Namen nicht. Wir fragen weder nach E-Mail-Adresse noch Telefonnummer, nutzen keinen GPS-Standort, keine Werbe-ID, keine Werbenetzwerke und keine fremden Tracking-Dienste. Wir verkaufen keine Daten und geben keine Daten zu Werbezwecken weiter.</p>
-    <p>Was wir verarbeiten, ist eine <strong>zufällige Geräte-Kennung</strong> und das, was du in der App tust – damit deine Pläne, deine Liste und dein Abo dir wieder zugeordnet werden können. Diese Kennung gilt rechtlich als personenbezogenes Datum, auch wenn wir dahinter keine Person erkennen können. Deshalb diese ausführliche Erklärung.</p>
+    <p><strong>Kurzfassung:</strong> Schlaukorb hat keine Konten und kennt Ihren Namen nicht. Wir fragen weder nach E-Mail-Adresse noch Telefonnummer, nutzen keinen GPS-Standort, keine Werbe-ID, keine Werbenetzwerke und keine fremden Tracking-Dienste. Wir verkaufen keine Daten und geben keine Daten zu Werbezwecken weiter.</p>
+    <p>Was wir verarbeiten, ist eine <strong>zufällige Geräte-Kennung</strong> und das, was Sie in der App tun – damit Ihre Pläne, Ihre Favoriten und Ihr Abonnement Ihnen wieder zugeordnet werden können. Diese Kennung gilt rechtlich als personenbezogenes Datum, auch wenn wir dahinter keine Person erkennen können. Deshalb diese ausführliche Erklärung.</p>
   </div>
 
   <h2>1. Verantwortlicher</h2>
@@ -39,9 +39,9 @@
   </p>
 
   <h2>2. Kein Konto, keine Identität</h2>
-  <p>Schlaukorb erfordert keine Registrierung. Wir erheben weder Namen, Anschrift, Geburtsdatum, Telefonnummer noch – außer du gibst sie uns aktiv für eine Antwort – eine E-Mail-Adresse. Es gibt keinen Login und keine Möglichkeit für uns, ein Gerät einer realen Person zuzuordnen.</p>
-  <p>Damit die App funktioniert, vergibt sie beim ersten Start eine <strong>zufällig erzeugte Geräte-Kennung</strong> (eine UUID). Sie ist die einzige Klammer zwischen dir und deinen Daten: ohne sie könnten wir deinen gespeicherten Wochenplan, deine geteilte Einkaufsliste oder dein bezahltes Abo beim nächsten Start nicht wiederfinden.</p>
-  <p>Damit diese Kennung eine Neuinstallation übersteht – sonst wären gekaufte Abos und gespeicherte Pläne nach jedem Neuinstallieren verloren –, wird sie unter iOS im Schlüsselbund (Keychain) abgelegt und unter Android über die <code>ANDROID_ID</code> wiedergefunden. Die <code>ANDROID_ID</code> ist an die App-Signatur gebunden: sie identifiziert dein Gerät gegenüber Schlaukorb und gegenüber niemandem sonst. Sie wird nicht für Werbung genutzt und nicht weitergegeben.</p>
+  <p>Schlaukorb erfordert keine Registrierung. Wir erheben weder Namen, Anschrift, Geburtsdatum, Telefonnummer noch – sofern Sie sie uns nicht aktiv für eine Antwort mitteilen – eine E-Mail-Adresse. Es gibt keinen Login und keine Möglichkeit für uns, ein Gerät einer realen Person zuzuordnen.</p>
+  <p>Damit die App funktioniert, vergibt sie beim ersten Start eine <strong>zufällig erzeugte Geräte-Kennung</strong> (eine UUID). Sie ist die einzige Klammer zwischen Ihnen und Ihren Daten: ohne sie könnten wir Ihren gespeicherten Wochenplan, Ihre Favoriten oder Ihr bezahltes Abonnement beim nächsten Start nicht wiederfinden.</p>
+  <p>Damit diese Kennung eine Neuinstallation übersteht – sonst wären gekaufte Abonnements und gespeicherte Pläne nach jeder Neuinstallation verloren –, wird sie unter iOS im Schlüsselbund (Keychain) abgelegt und unter Android über die <code>ANDROID_ID</code> wiedergefunden. Die <code>ANDROID_ID</code> ist an die App-Signatur gebunden: sie identifiziert Ihr Gerät gegenüber Schlaukorb und gegenüber niemandem sonst. Sie wird nicht für Werbung genutzt und nicht weitergegeben.</p>
 
   <h2>3. Welche Daten wir verarbeiten</h2>
   <div class="wrap">
@@ -49,60 +49,107 @@
     <tr><th>Daten</th><th>Wozu</th><th>Rechtsgrundlage</th></tr>
     <tr>
       <td><strong>Geräte-Kennung</strong> (zufällige UUID; unter Android zusätzlich die app-gebundene <code>ANDROID_ID</code> zur Wiederherstellung)</td>
-      <td>Zuordnung deiner Pläne, Einkaufsliste, Favoriten, Abo und Freikontingente</td>
+      <td>Zuordnung Ihrer Pläne, Favoriten, Abonnements und Freikontingente</td>
       <td>Art. 6 Abs. 1 lit. b DSGVO (Vertragserfüllung)</td>
     </tr>
     <tr>
-      <td><strong>Bundesland und – wenn du sie angibst – Postleitzahl</strong></td>
-      <td>Auswahl der richtigen Prospekt-Ausgabe. Viele Ketten haben regional unterschiedliche Angebote. Kein GPS, keine genaue Ortung.</td>
+      <td><strong>Bundesland und – sofern Sie sie angeben – Postleitzahl</strong></td>
+      <td>Auswahl der richtigen Prospekt-Ausgabe. Viele Ketten haben regional unterschiedliche Angebote. Kein GPS, keine genaue Ortung. Diese Angaben werden für die jeweilige Anfrage ausgewertet und nicht dauerhaft bei uns gespeichert.</td>
       <td>Art. 6 Abs. 1 lit. b DSGVO</td>
     </tr>
     <tr>
-      <td><strong>Nutzungsereignisse</strong> (z.&nbsp;B. „Screen geöffnet“, „Produkt zur Liste hinzugefügt“, Suchbegriffe in der Prospektsuche, Absturzmeldungen) mit Zeitstempel und Geräte-Kennung</td>
-      <td>Eigene, selbst gehostete Statistik: erkennen, was benutzt wird und was abstürzt. Keine Werbe-, Profiling- oder Scoring-Zwecke.</td>
-      <td>Art. 6 Abs. 1 lit. f DSGVO (berechtigtes Interesse an einer funktionierenden App)</td>
+      <td><strong>Nutzungsereignisse</strong> (z.&nbsp;B. „Screen geöffnet“, „Produkt zur Liste hinzugefügt“, Suchbegriffe der Produktsuche, Absturzmeldungen) mit Zeitstempel und Geräte-Kennung</td>
+      <td>Zwei Zwecke, die wir offen benennen. Erstens eine eigene, selbst gehostete Statistik: erkennen, was benutzt wird und was abstürzt. Zweitens die <strong>Auswahl und Formulierung unserer Mitteilungen für Ihr einzelnes Gerät</strong> – etwa ob Sie eine Erinnerung erhalten, weil Sie einen Plan erstellt, ihn aber nicht weiterverwendet haben, oder ob die Sonntags-Mitteilung Ihre eigenen Favoriten und Ihre bisherige Ersparnis nennt. Das ist eine auf Ihr Gerät bezogene Auswertung Ihres Nutzungsverhaltens. Keine Werbe-, Bonitäts- oder Scoring-Zwecke, keine Weitergabe.</td>
+      <td>Art. 6 Abs. 1 lit. f DSGVO (berechtigtes Interesse an einer funktionierenden und für Sie relevanten statt beliebigen App). Sie können dieser Verarbeitung nach Art. 21 DSGVO widersprechen. Der Versand der Mitteilung selbst erfolgt nur mit Ihrer Einwilligung (lit. a).</td>
     </tr>
     <tr>
-      <td><strong>Einkaufsliste und Wochenpläne</strong>, sofern du sie auf dem Server speicherst oder per Link teilst („Partner-Liste“)</td>
-      <td>Synchronisation zwischen Geräten und mit der Person, der du den Link gibst</td>
+      <td><strong>Favoriten</strong>: die Produktnamen, die Sie mit dem Herz markieren (höchstens 100), verknüpft mit der Geräte-Kennung</td>
+      <td>Die Liste wird kurz nach jeder Änderung automatisch auf unseren Server gespiegelt, damit die wöchentliche Mitteilung Ihnen sagen kann, dass ein von Ihnen markiertes Produkt im Angebot ist. Die Spiegelung erfolgt unabhängig davon, ob Sie Mitteilungen erlaubt haben; versendet wird nur mit Ihrer Erlaubnis. Entfernen Sie einen Favoriten in der App, wird die gespeicherte Liste überschrieben.</td>
+      <td>Art. 6 Abs. 1 lit. f DSGVO (berechtigtes Interesse an einer relevanten statt generischen Angebots-Mitteilung); Widerspruch nach Art. 21 DSGVO möglich</td>
+    </tr>
+    <tr>
+      <td><strong>Preis-Alarme</strong>: die Produktnamen, die Sie beobachten lassen (höchstens 50), verknüpft mit der Geräte-Kennung</td>
+      <td>Benachrichtigung, sobald ein beobachtetes Produkt im Angebot ist. Hinweis: Mit Schlaukorb&nbsp;Plus legt bereits das Markieren eines Favoriten zusätzlich einen Preis-Alarm für diesen Produktnamen an. Die Einträge bleiben gespeichert, bis Sie sie in der App entfernen.</td>
       <td>Art. 6 Abs. 1 lit. b DSGVO</td>
     </tr>
     <tr>
-      <td><strong>Angaben zur Ernährung</strong>, die du im Planer auswählst oder einträgst – darunter Optionen wie „glutenfrei (Zöliakie)“, „laktosefrei“ oder eigene Ausschlüsse</td>
+      <td><strong>Wochenpläne</strong>: Jeder fertig erstellte Plan wird <strong>automatisch</strong> auf unserem Server gespeichert und mit Ihrer Geräte-Kennung verknüpft – aufbewahrt werden die 30 neuesten pro Gerät</td>
+      <td>Damit Ihre Pläne eine Neuinstallation überstehen und damit ein bereits erzeugter Plan erneut ausgeliefert werden kann, falls er Ihr Gerät beim ersten Versuch nicht erreicht hat. Dafür ist kein Speichern-Schritt nötig; diese Speicherung lässt sich nicht abwählen.</td>
+      <td>Art. 6 Abs. 1 lit. b DSGVO sowie Art. 6 Abs. 1 lit. f DSGVO (Wiederherstellbarkeit, Vermeidung doppelter Generierungskosten)</td>
+    </tr>
+    <tr>
+      <td><strong>Einkaufsliste</strong>, sofern Sie sie per Link teilen („Partner-Liste“)</td>
+      <td>Synchronisation mit der Person, der Sie den Link geben. Ohne Teilen bleibt die Liste auf Ihrem Gerät. Wer den Link hat, sieht die Einträge der Liste.</td>
+      <td>Art. 6 Abs. 1 lit. b DSGVO</td>
+    </tr>
+    <tr>
+      <td><strong>Angaben zur Ernährung</strong>, die Sie im Planer auswählen oder eintragen – darunter Optionen wie „glutenfrei (Zöliakie)“, „laktosefrei“ oder eigene Ausschlüsse</td>
       <td>Erstellung eines Plans, der diese Vorgaben einhält. Siehe Abschnitt 5.</td>
       <td>Art. 6 Abs. 1 lit. b i.&nbsp;V.&nbsp;m. Art. 9 Abs. 2 lit. a DSGVO (ausdrückliche Einwilligung)</td>
     </tr>
     <tr>
+      <td><strong>Vorrat</strong>: die Zutaten, die Sie im Planer als bereits vorhanden eintragen – vorgegebene Vorschläge sowie eigener Freitext</td>
+      <td>Damit der Plan diese Zutaten einplant, sie aber nicht auf die Einkaufsliste setzt. Die Angaben werden für die jeweilige Anfrage an Anthropic übermittelt (Abschnitt 6); wir legen daraus kein dauerhaftes Profil an. Die daraus entstehenden „im Vorrat“-Markierungen sind Teil des gespeicherten Plans.</td>
+      <td>Art. 6 Abs. 1 lit. b DSGVO</td>
+    </tr>
+    <tr>
+      <td><strong>Gerichte-Verlauf</strong>: die Titel der Gerichte, die Ihrem Gerät in den vergangenen Wochen vorgeschlagen wurden, verknüpft mit der Geräte-Kennung</td>
+      <td>Damit sich Gerichte nicht Woche für Woche wiederholen. Bis zu 30 dieser Titel werden bei der Erstellung eines neuen Plans an Anthropic mitgesendet (Abschnitt 6). Die Einträge werden nach 12 Wochen automatisch gelöscht.</td>
+      <td>Art. 6 Abs. 1 lit. f DSGVO (berechtigtes Interesse an abwechslungsreichen Plänen); Widerspruch nach Art. 21 DSGVO möglich</td>
+    </tr>
+    <tr>
+      <td><strong>Rezept-Bibliothek</strong>: jedes erzeugte Rezept wird zusammen mit den bei der Erstellung aktiven Ernährungsvorgaben und der Region dauerhaft gespeichert – <strong>ohne Geräte-Kennung</strong></td>
+      <td>Aufbau einer Rezeptsammlung, damit künftige Pläne auf bereits geprüfte Rezepte zurückgreifen können, statt jedes Mal neu erzeugt zu werden. Die Sammlung enthält keinen Bezug zu Ihnen: sie lässt sich weder Ihrem Gerät noch Ihrer Person zuordnen. Weil die Ernährungsvorgaben dabei mitgespeichert werden, betrifft dies auch die in Abschnitt 5 genannten Angaben.</td>
+      <td>Art. 6 Abs. 1 lit. f DSGVO (berechtigtes Interesse an Qualität und Kostenkontrolle); für die Ernährungsvorgaben Art. 9 Abs. 2 lit. a DSGVO</td>
+    </tr>
+    <tr>
+      <td><strong>Einladungen</strong>: Ihr Einladungscode, die Geräte-Kennungen des einladenden <em>und</em> des eingeladenen Geräts, der eingelöste Code, Zeitpunkt und Kalendertag der Einlösung, ob die Einladung gezählt wurde, die gewährten Freimonate sowie die IP-Adresse, von der eingelöst wurde</td>
+      <td>Freischaltung der Freimonate und Erkennung von Missbrauch. <strong>Dies ist die einzige Stelle, an der wir zwei Geräte dauerhaft miteinander verknüpfen.</strong> Nur wenn Sie einen Einladungscode erzeugen oder einlösen.</td>
+      <td>Art. 6 Abs. 1 lit. b DSGVO; für die IP-Adresse und die Missbrauchserkennung Art. 6 Abs. 1 lit. f DSGVO</td>
+    </tr>
+    <tr>
+      <td><strong>Partner-Code</strong>: geben Sie beim Kauf den Code einer Creatorin oder eines Creators ein, speichern wir diesen Code zusammen mit Ihrer Geräte-Kennung, dem gekauften Produkt, dem <strong>gezahlten Preis</strong>, der Währung und der daraus berechneten Provision</td>
+      <td>Abrechnung der Provision mit der Person, deren Code Sie eingegeben haben. Der Code wird außerdem als Merkmal an RevenueCat übermittelt. Die Creatorin oder der Creator erfährt <strong>nicht</strong>, wer Sie sind – nur, dass über den Code ein Kauf zustande kam. Nur wenn Sie einen Code eingeben.</td>
+      <td>Art. 6 Abs. 1 lit. b und lit. f DSGVO</td>
+    </tr>
+    <tr>
+      <td><strong>Rezept-Import</strong>: der von Ihnen eingefügte Link sowie die daraus geladenen Inhalte – Beschreibungstext, die Tonspur des Videos und einzelne Standbilder</td>
+      <td>Auslesen des Rezepts aus dem verlinkten Beitrag. Nur wenn Sie diese Funktion nutzen. Näheres in Abschnitt 6.</td>
+      <td>Art. 6 Abs. 1 lit. b DSGVO</td>
+    </tr>
+    <tr>
       <td><strong>Push-Token</strong> (eine vom Betriebssystem vergebene Zustelladresse) nebst Geräte-Kennung und Region</td>
-      <td>Wöchentliche Benachrichtigung über neue Angebote und Preisalarme – nur wenn du Mitteilungen erlaubt hast</td>
+      <td>Wöchentliche Benachrichtigung über neue Angebote und Preis-Alarme – nur wenn Sie Mitteilungen erlaubt haben</td>
       <td>Art. 6 Abs. 1 lit. a DSGVO (Einwilligung); jederzeit über die Systemeinstellungen widerrufbar</td>
     </tr>
     <tr>
-      <td><strong>Abo-Status</strong> (Kaufzeitpunkt, Laufzeit, Verlängerung) verknüpft mit der Geräte-Kennung</td>
+      <td><strong>Abonnement-Status</strong> (Kaufzeitpunkt, Laufzeit, Verlängerung) verknüpft mit der Geräte-Kennung</td>
       <td>Freischaltung von Schlaukorb&nbsp;Plus. <strong>Zahlungsdaten sehen wir nie</strong> – die Zahlung läuft vollständig über Apple bzw. Google.</td>
       <td>Art. 6 Abs. 1 lit. b DSGVO</td>
     </tr>
     <tr>
-      <td><strong>Feedback und Problemmeldungen</strong>: dein Text, optionale Sternebewertung, App-Version – und nur wenn du „Antwort per E-Mail“ aktivierst, deine E-Mail-Adresse</td>
-      <td>Beantwortung und Fehlerbehebung</td>
+      <td><strong>Feedback und Problemmeldungen</strong>: Ihr Text, optionale Sternebewertung, App-Version, Ihre Geräte-Kennung sowie Ihre eingestellte Region, die dem Text automatisch vorangestellt wird. Aktivieren Sie „Antwort per E-Mail“, wird die von Ihnen eingegebene Adresse in denselben Text eingefügt. Melden Sie ein Problem an einem Rezept, wird zusätzlich <strong>das vollständige Rezept gespeichert, das Sie vor sich hatten</strong> – samt der Zutaten, die sich aus Ihren Ernährungsvorgaben ergeben haben.</td>
+      <td>Beantwortung und Fehlerbehebung. Ein Rezeptfehler lässt sich sonst nicht nachvollziehen, weil das Rezept für jeden Nutzer anders aussieht. Weil alles in einem Textfeld steht, lässt sich die Adresse nachträglich nicht getrennt von der Nachricht löschen – wir löschen dann den ganzen Eintrag.</td>
       <td>Art. 6 Abs. 1 lit. a und lit. f DSGVO</td>
     </tr>
     <tr>
-      <td><strong>IP-Adresse</strong> in Server-Logs; bei den kostenlosen Rezept-Tauschen wird zusätzlich die erste IP gespeichert</td>
-      <td>Betrieb und Sicherheit des Servers, Missbrauchserkennung</td>
+      <td><strong>IP-Adresse</strong> in Server-Logs. Darüber hinaus speichern wir sie in zwei Fällen dauerhaft in der Datenbank: beim ersten kostenlosen Rezept-Tausch eines Geräts (zusammen mit der Geräte-Kennung) und bei der Einlösung eines Einladungscodes.</td>
+      <td>Betrieb und Sicherheit des Servers, Erkennung von Missbrauch der Freikontingente und der Einladungen</td>
       <td>Art. 6 Abs. 1 lit. f DSGVO</td>
     </tr>
   </table>
   </div>
 
-  <h2>4. Was auf deinem Gerät bleibt</h2>
-  <p>Nicht alles wandert zu uns. Rein lokal bleiben insbesondere: der Dunkelmodus und die übrigen Anzeigeeinstellungen, deine Favoriten, dein zuletzt gewählter Filter sowie eine lokale Einkaufsliste, solange du sie nicht teilst oder auf dem Server speicherst.</p>
+  <h2>4. Was auf Ihrem Gerät bleibt</h2>
+  <p>Nicht alles wird an uns übermittelt. Rein lokal bleiben insbesondere: der Dunkelmodus und die übrigen Anzeigeeinstellungen, Ihr zuletzt gewählter Filter sowie Ihre Einkaufsliste, solange Sie sie nicht per Link teilen.</p>
+  <p>Von Ihren Favoriten bleiben die vollständigen Produktdaten auf dem Gerät; an uns übermittelt wird nur die Liste der Produktnamen (siehe Abschnitt 3).</p>
+  <p><strong>Kalender:</strong> Wenn Sie einen Wochenplan in Ihren Kalender übernehmen, fragt die App die Kalender-Berechtigung ab, liest die auf dem Gerät vorhandenen Kalender aus, um den richtigen auszuwählen, und trägt die Termine dort ein. Das geschieht ausschließlich auf Ihrem Gerät: <strong>wir lesen keine Termine und übermitteln nichts aus Ihrem Kalender an uns oder an Dritte.</strong> Sie können die Berechtigung jederzeit in den Systemeinstellungen entziehen; die App bleibt ohne sie nutzbar.</p>
 
   <h2>5. Gesundheitsbezogene Angaben im Planer</h2>
-  <p>Wenn du im Wochenplaner eine Ernährungsvorgabe wie „glutenfrei (Zöliakie)“ oder „laktosefrei“ auswählst oder eine Zutat wegen einer Unverträglichkeit ausschließt, kann das eine Angabe über deine Gesundheit sein. Solche Daten sind nach Art.&nbsp;9 DSGVO besonders geschützt.</p>
-  <p>Wir verarbeiten sie ausschließlich, um den Plan zu erstellen, den du angefordert hast. Die Auswahl ist freiwillig, und die App ist ohne sie vollständig nutzbar. Indem du eine solche Vorgabe setzt und den Plan erstellst, willigst du in diese Verarbeitung ausdrücklich ein (Art.&nbsp;9 Abs.&nbsp;2 lit.&nbsp;a DSGVO). Du kannst die Vorgabe jederzeit wieder abwählen; gespeicherte Pläne kannst du in der App löschen.</p>
-  <p>Zur Erstellung des Plans wird deine Vorgabe zusammen mit den gewählten Märkten und der Region an Anthropic übermittelt (siehe Abschnitt 6). Es wird dabei <strong>keine Geräte-Kennung und kein sonstiges Identifikationsmerkmal mitgesendet</strong>.</p>
-  <p><strong>Wichtiger Hinweis:</strong> Schlaukorb ist kein Medizinprodukt und ersetzt keine ärztliche oder ernährungsmedizinische Beratung. Prüfe bei einer Allergie oder Unverträglichkeit immer die Angaben auf der Verpackung.</p>
+  <p>Wenn Sie im Wochenplaner eine Ernährungsvorgabe wie „glutenfrei (Zöliakie)“ oder „laktosefrei“ auswählen oder eine Zutat wegen einer Unverträglichkeit ausschließen, kann dies eine Angabe über Ihre Gesundheit sein. Solche Daten sind nach Art.&nbsp;9 DSGVO besonders geschützt.</p>
+  <p>In erster Linie verarbeiten wir sie, um den Plan zu erstellen, den Sie angefordert haben. Daneben gibt es genau zwei Stellen, an denen etwas davon erhalten bleibt, und wir benennen beide: der auf unserem Server gespeicherte Plan enthält den unten erwähnten allgemeinen Etiketten-Hinweis, und das erzeugte Rezept wandert zusammen mit den aktiven Ernährungsvorgaben in die Rezept-Bibliothek – dort allerdings <strong>ohne jede Verknüpfung zu Ihrem Gerät</strong> (Abschnitt&nbsp;3). Für unsere Nutzungsstatistik werten wir gesundheitsbezogene Vorgaben nicht aus. Die Auswahl ist freiwillig, und die App ist ohne sie vollständig nutzbar. Indem Sie eine solche Vorgabe setzen und den Plan erstellen, willigen Sie in diese Verarbeitung ausdrücklich ein (Art.&nbsp;9 Abs.&nbsp;2 lit.&nbsp;a DSGVO). Sie können die Vorgabe jederzeit wieder abwählen. Einen gespeicherten Plan können Sie in der App löschen – das entfernt die Kopie auf Ihrem Gerät; die Server-Kopie löschen wir auf Ihre Anfrage hin (Abschnitt 10).</p>
+  <p>Zur Erstellung des Plans wird Ihre Vorgabe zusammen mit den gewählten Märkten und der Region an Anthropic übermittelt (siehe Abschnitt 6). Es wird dabei <strong>keine Geräte-Kennung und kein sonstiges Identifikationsmerkmal mitgesendet</strong>. Der auf unserem Server gespeicherte Plan enthält bei allen Allergie-Vorgaben einen allgemeinen Etiketten-Hinweis, aus dem hervorgeht, dass eine solche Vorgabe verwendet wurde – nicht jedoch, welche.</p>
+  <p><strong>Wichtiger Hinweis:</strong> Schlaukorb ist kein Medizinprodukt und ersetzt keine ärztliche oder ernährungsmedizinische Beratung. Prüfen Sie bei einer Allergie oder Unverträglichkeit immer die Angaben auf der Verpackung.</p>
 
   <h2>6. Empfänger und Auftragsverarbeiter</h2>
   <p>Wir geben keine Daten zu Werbezwecken weiter und verkaufen keine Daten. Für den Betrieb setzen wir folgende Dienstleister ein, die ausschließlich weisungsgebunden für uns tätig sind (Auftragsverarbeitung nach Art.&nbsp;28 DSGVO):</p>
@@ -110,55 +157,70 @@
   <table>
     <tr><th>Dienst</th><th>Zweck</th><th>Was dorthin gelangt</th></tr>
     <tr><td>Railway Corp., USA</td><td>Hosting von Server und Datenbank (Region EU)</td><td>Alle in Abschnitt 3 genannten Serverdaten</td></tr>
-    <tr><td>RevenueCat, Inc., USA</td><td>Verwaltung der Abonnements</td><td>Geräte-Kennung, Kauf- und Laufzeitdaten. Keine Zahlungsdaten.</td></tr>
-    <tr><td>Anthropic PBC, USA</td><td>Erstellung der Wochenpläne und Rezepte (Claude)</td><td>Deine Planvorgaben: Budget, Personenzahl, Märkte, Region, Ernährungsvorgaben. <strong>Ohne Geräte-Kennung.</strong></td></tr>
-    <tr><td>OpenAI, L.L.C., USA</td><td>Transkription der Tonspur beim Import eines Rezept-Videos – nur wenn du diese Funktion nutzt</td><td>Die Tonspur des von dir eingefügten Videolinks</td></tr>
+    <tr><td>RevenueCat, Inc., USA</td><td>Verwaltung der Abonnements</td><td>Geräte-Kennung, Kauf- und Laufzeitdaten sowie – falls Sie einen eingegeben haben – der Partner-Code. Keine Zahlungsdaten.</td></tr>
+    <tr>
+      <td>Anthropic PBC, USA</td>
+      <td>Erstellung der Wochenpläne und Rezepte sowie Auswertung eines importierten Rezepts (Claude)</td>
+      <td>Beim Wochenplan: Ihre Planvorgaben – Budget, Personenzahl, Märkte, Region, Ernährungsvorgaben, Ihre Ausschlüsse, Ihre eingetragenen Vorräte sowie bis zu 30 Titel von Gerichten, die Ihrem Gerät in den vergangenen Wochen vorgeschlagen wurden (damit sich nichts wiederholt). Beim Rezept-Import zusätzlich der Beschreibungstext oder der von Ihnen eingefügte Rezepttext, die Textfassung der Tonspur sowie bis zu 8 Standbilder aus dem Video bzw. bis zu 10 Bilder eines Bilder-Beitrags. <strong>In beiden Fällen ohne Geräte-Kennung.</strong></td>
+    </tr>
+    <tr><td>OpenAI, L.L.C., USA</td><td>Umwandlung der Tonspur eines importierten Rezept-Videos in Text – nur wenn Sie diese Funktion nutzen</td><td>Die Tonspur des von Ihnen eingefügten Videolinks</td></tr>
     <tr><td>650 Industries, Inc. (Expo), USA – sowie Apple bzw. Google für die Zustellung</td><td>Versand der Push-Nachrichten</td><td>Push-Token und Nachrichtentext</td></tr>
-    <tr><td>Resend, Inc., USA</td><td>Weiterleitung deines Feedbacks an unser Postfach</td><td>Nur der Feedback-Text samt der von dir angegebenen Antwortadresse</td></tr>
-    <tr><td>Apple Inc. / Google Ireland Ltd.</td><td>Abwicklung der Zahlung, App-Auslieferung</td><td>Die Zahlung läuft ausschließlich dort; wir erhalten nur die Information, dass ein Abo aktiv ist. Es gelten deren eigene Datenschutzerklärungen.</td></tr>
+    <tr><td>Resend, Inc., USA</td><td>Weiterleitung Ihres Feedbacks an unser Postfach</td><td>Der Feedback-Text samt der darin enthaltenen Angaben (Region und, falls angegeben, Ihre Antwortadresse)</td></tr>
+    <tr><td>Apple Inc. / Google Ireland Ltd.</td><td>Abwicklung der Zahlung, App-Auslieferung</td><td>Die Zahlung läuft ausschließlich dort; wir erhalten nur die Information, dass ein Abonnement aktiv ist. Es gelten deren eigene Datenschutzerklärungen.</td></tr>
     <tr><td>GitHub, Inc., USA</td><td>Hosting dieser Website (GitHub Pages)</td><td>Server-Logs beim Aufruf der Website, insbesondere IP-Adresse</td></tr>
   </table>
   </div>
-  <p><strong>Übermittlung in die USA:</strong> Einige dieser Anbieter verarbeiten Daten in den Vereinigten Staaten. Die Übermittlung erfolgt auf Grundlage der Standardvertragsklauseln der EU-Kommission (Art.&nbsp;46 Abs.&nbsp;2 lit.&nbsp;c DSGVO) beziehungsweise – soweit der Anbieter zertifiziert ist – des EU-US Data Privacy Framework (Art.&nbsp;45 DSGVO). Ein gleichwertiges Schutzniveau kann trotz dieser Garantien nicht in jedem Fall zugesichert werden; insbesondere ist ein Zugriff durch US-Behörden nicht vollständig auszuschließen.</p>
+  <p>Beim Rezept-Import ruft unser Server außerdem den von Ihnen eingefügten Link bei der jeweiligen Plattform (z.&nbsp;B. TikTok oder Instagram) ab, um den Beitrag zu laden. Dabei erfährt die Plattform, dass dieser Beitrag von unserem Server abgerufen wurde; Ihre Geräte-Kennung wird nicht übermittelt.</p>
+  <p><strong>Übermittlung in die USA:</strong> Einige dieser Anbieter verarbeiten Daten in den Vereinigten Staaten. Die Übermittlung erfolgt auf Grundlage der Standardvertragsklauseln der EU-Kommission (Art.&nbsp;46 Abs.&nbsp;2 lit.&nbsp;c DSGVO) beziehungsweise – soweit der Anbieter zertifiziert ist – des EU-US Data Privacy Framework (Art.&nbsp;45 DSGVO). Eine Kopie der Garantien erhalten Sie auf Anfrage unter <a href="mailto:hallo@schlaukorb.app">hallo@schlaukorb.app</a>. Ein gleichwertiges Schutzniveau kann trotz dieser Garantien nicht in jedem Fall zugesichert werden; insbesondere ist ein Zugriff durch US-Behörden nicht vollständig auszuschließen.</p>
 
   <h2>7. Was wir ausdrücklich nicht tun</h2>
   <ul>
     <li>Keine Werbenetzwerke und keine Werbe-IDs (kein IDFA, keine Google Advertising ID).</li>
     <li>Keine fremden Tracking- oder Analyse-Dienste (kein Google Analytics, kein Firebase Analytics, kein Meta-SDK). Unsere Statistik läuft auf unserem eigenen Server.</li>
     <li>Kein Verkauf und keine Weitergabe von Daten an Dritte zu deren eigenen Zwecken.</li>
-    <li>Kein Zugriff auf Kontakte, Fotos, Mikrofon oder Kamera.</li>
-    <li>Keine GPS-Ortung. Die Region kommt aus deiner eigenen Auswahl.</li>
-    <li>Keine automatisierte Entscheidungsfindung mit rechtlicher Wirkung und kein Profiling im Sinne des Art.&nbsp;22 DSGVO.</li>
-    <li>Keine Verarbeitung von Zahlungsdaten – die sehen wir nie.</li>
+    <li>Kein Zugriff auf Kontakte, Fotos, Mikrofon oder Kamera. Zum Kalender siehe Abschnitt 4 – dorthin schreiben wir nur, wenn Sie es auslösen, und lesen nichts aus.</li>
+    <li>Keine GPS-Ortung. Die Region ergibt sich aus Ihrer eigenen Auswahl.</li>
+    <li>Keine automatisierte Entscheidungsfindung mit rechtlicher oder ähnlich erheblicher Wirkung im Sinne des Art.&nbsp;22 DSGVO. Die in Abschnitt 3 beschriebene Auswahl von Mitteilungen entfaltet keine solche Wirkung.</li>
+    <li>Keine Verarbeitung von Zahlungsdaten – diese sehen wir nie.</li>
   </ul>
 
   <h2>8. Speicherdauer</h2>
   <ul>
     <li><strong>Nutzungsereignisse:</strong> 12 Monate, danach automatische Löschung.</li>
     <li><strong>Push-Token:</strong> werden entfernt, wenn ein Gerät 60 Tage lang inaktiv war.</li>
-    <li><strong>Pläne, Einkaufslisten, Favoriten:</strong> bis du sie löschst oder eine Löschung anforderst.</li>
-    <li><strong>Abo-Daten:</strong> für die Dauer des Abos und anschließend, soweit handels- und steuerrechtliche Aufbewahrungsfristen dies erfordern.</li>
+    <li><strong>Wochenpläne auf dem Server:</strong> die 30 neuesten pro Gerät; ältere werden beim Erstellen eines neuen Plans automatisch gelöscht. Das Löschen eines Plans in der App entfernt nur die Kopie auf Ihrem Gerät – die Server-Kopie löschen wir auf Löschanfrage (Abschnitt 10).</li>
+    <li><strong>Favoriten, Preis-Alarme und geteilte Einkaufslisten:</strong> bis Sie sie in der App entfernen, die Partner-Liste auflösen oder eine Löschung anfordern.</li>
+    <li><strong>Abonnement-Daten:</strong> für die Dauer des Abonnements und anschließend, soweit handels- und steuerrechtliche Aufbewahrungsfristen dies erfordern.</li>
     <li><strong>Feedback:</strong> bis die Anfrage erledigt ist, längstens 24 Monate.</li>
-    <li><strong>Server-Logs:</strong> in der Regel 30 Tage.</li>
+    <li><strong>Gerichte-Verlauf:</strong> 12 Wochen, danach automatische Löschung.</li>
+    <li><strong>Rezept-Bibliothek:</strong> dauerhaft – die Einträge sind keiner Person und keinem Gerät zugeordnet.</li>
+    <li><strong>Einladungsdaten:</strong> die Verknüpfung von einladendem und eingeladenem Gerät samt Code, Einlösezeitpunkt und gespeicherter IP-Adresse bleibt dauerhaft erhalten; sie ist der Nachweis für bereits gewährte Freimonate. Auf Löschanfrage entfernen wir sie.</li>
+    <li><strong>Partner-Code-Zuordnung:</strong> für die Dauer der Provisionsabrechnung und die anschließenden steuerrechtlichen Aufbewahrungsfristen.</li>
+    <li><strong>IP-Adresse aus dem ersten Rezept-Tausch und aus einer Einladungs-Einlösung:</strong> bleibt derzeit gespeichert und wird nicht automatisch gelöscht. Auf Löschanfrage entfernen wir sie.</li>
+    <li><strong>Server-Logs:</strong> werden von unserem Hosting-Anbieter Railway verwaltet und nach dessen Vorgaben nach kurzer Zeit automatisch entfernt; wir werten sie nicht dauerhaft aus und legen keine eigenen Kopien an.</li>
   </ul>
 
-  <h2>9. Deine Rechte</h2>
-  <p>Dir stehen nach der DSGVO die Rechte auf Auskunft (Art.&nbsp;15), Berichtigung (Art.&nbsp;16), Löschung (Art.&nbsp;17), Einschränkung der Verarbeitung (Art.&nbsp;18), Datenübertragbarkeit (Art.&nbsp;20) und Widerspruch (Art.&nbsp;21) zu. Erteilte Einwilligungen kannst du jederzeit mit Wirkung für die Zukunft widerrufen.</p>
-  <p>Außerdem hast du das Recht, dich bei einer Aufsichtsbehörde zu beschweren. Für uns zuständig ist die Landesbeauftragte für Datenschutz und Informationsfreiheit Nordrhein-Westfalen, Kavalleriestraße 2–4, 40213 Düsseldorf.</p>
+  <h2>9. Müssen Sie diese Daten bereitstellen?</h2>
+  <p>Es gibt keine gesetzliche Pflicht, uns Daten bereitzustellen. Vertraglich notwendig ist allein die Geräte-Kennung: ohne sie lässt sich die App nicht betreiben, weil wir Ihre Pläne und ein etwaiges Abonnement sonst nicht zuordnen könnten. Sie entsteht automatisch beim ersten Start.</p>
+  <p>Alles Übrige ist freiwillig. Ohne Bundesland oder Postleitzahl zeigen wir eine überregionale Prospekt-Ausgabe, die weniger genau zu Ihren Märkten passt. Ohne Ernährungsvorgaben, Favoriten, Preis-Alarme, Mitteilungen oder Rezept-Import entfallen lediglich die jeweiligen Funktionen. Andere Nachteile entstehen Ihnen nicht.</p>
+
+  <h2>10. Ihre Rechte</h2>
+  <p>Ihnen stehen nach der DSGVO die Rechte auf Auskunft (Art.&nbsp;15), Berichtigung (Art.&nbsp;16), Löschung (Art.&nbsp;17), Einschränkung der Verarbeitung (Art.&nbsp;18), Datenübertragbarkeit (Art.&nbsp;20) und Widerspruch (Art.&nbsp;21) zu. Erteilte Einwilligungen können Sie jederzeit mit Wirkung für die Zukunft widerrufen.</p>
+  <p>Außerdem haben Sie das Recht, sich bei einer Aufsichtsbehörde zu beschweren. Für uns zuständig ist die Landesbeauftragte für Datenschutz und Informationsfreiheit Nordrhein-Westfalen, Kavalleriestraße 2–4, 40213 Düsseldorf.</p>
 
   <h3>Auskunft und Löschung anfordern</h3>
-  <p>Weil wir keine Konten führen, können wir dich nur über deine Geräte-Kennung finden. Du findest sie in der App unter <strong>Einstellungen → Info → Meine ID</strong>; tippe lange darauf, um sie zu kopieren.</p>
-  <p>Schicke die Kennung an <a href="mailto:hallo@schlaukorb.app">hallo@schlaukorb.app</a> mit dem Stichwort <strong>Auskunft</strong> oder <strong>Löschung</strong>. Wir bearbeiten die Anfrage innerhalb eines Monats und löschen dann alle zu dieser Kennung gespeicherten Daten. Ein bestehendes Abo wird davon nicht berührt – das verwaltest du bei Apple beziehungsweise Google.</p>
-  <p>Da wir dich nicht identifizieren können, ist die Geräte-Kennung der einzige Nachweis. Ohne sie können wir eine Anfrage weder zuordnen noch beantworten (Art.&nbsp;11 Abs.&nbsp;2 DSGVO).</p>
+  <p>Da wir keine Konten führen, können wir Sie nur über Ihre Geräte-Kennung finden. Sie finden sie in der App unter <strong>Einstellungen → Info → Meine ID</strong>; tippen Sie lange darauf, um sie zu kopieren.</p>
+  <p>Senden Sie die Kennung an <a href="mailto:hallo@schlaukorb.app">hallo@schlaukorb.app</a> mit dem Stichwort <strong>Auskunft</strong> oder <strong>Löschung</strong>. Wir bearbeiten die Anfrage innerhalb eines Monats und löschen dann alle zu dieser Kennung gespeicherten Daten. Ein bestehendes Abonnement wird davon nicht berührt – dieses verwalten Sie bei Apple beziehungsweise Google.</p>
+  <p>Da wir Sie nicht identifizieren können, ist die Geräte-Kennung der einzige Nachweis. Ohne sie können wir eine Anfrage weder zuordnen noch beantworten (Art.&nbsp;11 Abs.&nbsp;2 DSGVO).</p>
 
-  <h2>10. Diese Website</h2>
+  <h2>11. Diese Website</h2>
   <p>Diese Website wird über GitHub Pages (GitHub, Inc., 88 Colin P. Kelly Jr. St, San Francisco, CA 94107, USA) gehostet. Beim Aufruf verarbeitet GitHub technisch notwendige Daten – insbesondere die IP-Adresse – in Server-Logfiles, um die Seite auszuliefern und den Dienst abzusichern (Art.&nbsp;6 Abs.&nbsp;1 lit.&nbsp;f DSGVO). Wir selbst setzen auf dieser Website keine Cookies, keine Analyse-Tools und kein Tracking ein. Weitere Informationen: <a href="https://docs.github.com/en/site-policy/privacy-policies/github-general-privacy-statement" rel="noopener">GitHub Privacy Statement</a>.</p>
 
-  <h2>11. Kinder</h2>
+  <h2>12. Kinder</h2>
   <p>Schlaukorb richtet sich nicht an Kinder unter 16 Jahren. Wir erheben nicht wissentlich Daten von Kindern unter 16 Jahren.</p>
 
-  <h2>12. Änderungen dieser Datenschutzerklärung</h2>
-  <p>Wir aktualisieren diese Erklärung, wenn sich die Funktionen der App ändern. Die jeweils geltende Fassung findest du stets auf dieser Seite mit dem Datum der letzten Änderung.</p>
+  <h2>13. Änderungen dieser Datenschutzerklärung</h2>
+  <p>Wir aktualisieren diese Erklärung, wenn sich die Funktionen der App ändern. Die jeweils geltende Fassung finden Sie stets auf dieser Seite mit dem Datum der letzten Änderung.</p>
 
   <hr />
 
@@ -166,7 +228,7 @@
   <p><strong>Last updated:</strong> September 2026</p>
 
   <p><strong>In short:</strong> Schlaukorb has no accounts and does not know your name. We never ask for your email address or phone number, we do not use GPS, advertising identifiers, ad networks or any third-party tracking. We do not sell data and we do not share data for advertising.</p>
-  <p>What we do process is a <strong>randomly generated device identifier</strong> and what you do in the app, so your plans, your list and your subscription can be returned to you. Under the GDPR that identifier counts as personal data even though we cannot see a person behind it — which is why this policy is detailed.</p>
+  <p>What we do process is a <strong>randomly generated device identifier</strong> and what you do in the app, so your plans, your favourites and your subscription can be returned to you. Under the GDPR that identifier counts as personal data even though we cannot see a person behind it — which is why this policy is detailed.</p>
 
   <h3>Controller</h3>
   <p>Gerret Schnock, Feldblick 20, 40880 Ratingen, Germany — <a href="mailto:hallo@schlaukorb.app">hallo@schlaukorb.app</a></p>
@@ -174,27 +236,43 @@
   <h3>What we process</h3>
   <ul>
     <li><strong>Device identifier</strong> — a random UUID created on first launch. On iOS it is kept in the Keychain and on Android recovered via <code>ANDROID_ID</code>, so that a reinstall does not lose your purchased subscription or saved plans. It is scoped to this app and is never used for advertising.</li>
-    <li><strong>Federal state and, if you enter it, postal code</strong> — to select the correct regional flyer edition. No GPS, no precise location.</li>
-    <li><strong>Usage events</strong> — screen views, items added to your list, flyer search terms, crash reports, with a timestamp and the device identifier. Self-hosted analytics only; no profiling, no advertising.</li>
-    <li><strong>Shopping lists and meal plans</strong> where you save them to the server or share them via link.</li>
+    <li><strong>Federal state and, if you enter it, postal code</strong> — to select the correct regional flyer edition. No GPS, no precise location. Evaluated for the request in hand and not stored permanently.</li>
+    <li><strong>Usage events</strong> — screen views, items added to your list, product search terms, crash reports, with a timestamp and the device identifier. Used for two things, both stated plainly: self-hosted statistics, and deciding <strong>which notification your individual device receives and how it is worded</strong> — for example a reminder because you generated a plan and did not use it, or a Sunday message naming your own favourites and your savings so far. That is an assessment of your usage tied to your device. No advertising, credit-scoring or profiling for third parties, and nothing is passed on. Legal basis Art. 6(1)(f); you may object under Art. 21. Sending the notification itself requires your consent.</li>
+    <li><strong>Favourites</strong> — the product names you mark with the heart (up to 100) are mirrored to our server shortly after each change and stored against your device identifier, so the weekly notification can tell you a product you marked is on offer. The mirroring happens whether or not you allowed notifications; removing a favourite overwrites the stored list.</li>
+    <li><strong>Price alerts</strong> — the product names you watch (up to 50), stored until you remove them. With Schlaukorb Plus, marking a favourite also registers a price alert for that name.</li>
+    <li><strong>Meal plans</strong> — every plan you generate is stored on our server <strong>automatically</strong>, linked to your device identifier; we keep the 30 most recent per device, so plans survive a reinstall and an interrupted generation can be delivered again without a second AI run. There is no save step and no way to opt out.</li>
+    <li><strong>Shopping list</strong> — only where you share it via link ("Partner-Liste"). Otherwise it stays on your device. Anyone holding the link can see the list's entries.</li>
     <li><strong>Dietary preferences you select in the planner</strong>, which may include health information such as coeliac disease or lactose intolerance — see below.</li>
+    <li><strong>Pantry</strong> — the ingredients you enter as already at home (presets or your own free text), sent to Anthropic for that request so the plan does not shop for them again. We build no lasting profile from them; the resulting "im Vorrat" markers are part of the stored plan.</li>
+    <li><strong>Dish history</strong> — the titles of dishes suggested to your device in recent weeks, linked to your device identifier, so meals do not repeat. Up to 30 of them are sent to Anthropic when a new plan is generated. Deleted automatically after 12 weeks.</li>
+    <li><strong>Recipe library</strong> — every generated recipe is stored permanently together with the dietary settings active at generation and the region, <strong>with no device identifier attached</strong>, so future plans can draw on already-checked recipes.</li>
+    <li><strong>Invitations</strong> — your referral code, the device identifiers of both the inviting and the invited device, the code redeemed, the time and day of redemption, whether it counted, the free months granted, and the IP address it was redeemed from. This is the only place where we permanently link two devices. Only if you create or redeem a code.</li>
+    <li><strong>Partner code</strong> — if you enter a creator's code at purchase, we store that code with your device identifier, the product, the <strong>price paid</strong>, the currency and the resulting commission, and the code is also sent to RevenueCat as an attribute. The creator never learns who you are, only that a purchase came through their code.</li>
+    <li><strong>Recipe import</strong> — the link you paste and what is loaded from it: the caption, the video's audio, and individual still frames. Only when you use the feature.</li>
     <li><strong>Push token</strong>, device identifier and region, only if you enable notifications.</li>
     <li><strong>Subscription status</strong> linked to the device identifier. We never see payment details; billing runs entirely through Apple or Google.</li>
-    <li><strong>Feedback</strong> you send, including an email address only if you tick "reply by email".</li>
-    <li><strong>IP address</strong> in server logs, for operation and abuse prevention.</li>
+    <li><strong>Feedback</strong> — your text, an optional star rating, the app version, your device identifier and your selected region, which is prepended to the text automatically. If you tick "reply by email", the address you enter is inserted into that same text, so it cannot later be deleted separately from the message — we delete the whole entry instead. Reporting a problem with a recipe additionally stores <strong>the entire recipe you were looking at</strong>, including the ingredients that followed from your dietary settings — a recipe fault cannot otherwise be reproduced, because every user’s recipe differs.</li>
+    <li><strong>IP address</strong> in server logs. Beyond that we store it permanently in two cases: on a device’s first free recipe swap (alongside the device identifier) and when an invitation code is redeemed — both for abuse prevention.</li>
   </ul>
 
+  <h3>What stays on your device</h3>
+  <p>Dark mode and other display settings, your last-used filter, and your shopping list unless you share it. Of your favourites, the full product records stay on the device — only the product names are sent to us.</p>
+  <p><strong>Calendar:</strong> if you add a meal plan to your calendar, the app requests calendar permission, reads the calendars on your device in order to pick the right one, and writes the events there. This happens entirely on your device — <strong>we do not read your appointments and nothing from your calendar is transmitted to us or anyone else.</strong></p>
+
   <h3>Health-related data</h3>
-  <p>Selecting a dietary option such as "gluten-free (coeliac)" may constitute health data under Article 9 GDPR. It is optional, the app is fully usable without it, and we process it solely to produce the plan you requested — on the basis of your explicit consent (Art. 9(2)(a) GDPR). It is sent to Anthropic to generate the plan <strong>without any device identifier attached</strong>. Schlaukorb is not a medical device; always check the packaging if you have an allergy or intolerance.</p>
+  <p>Selecting a dietary option such as "gluten-free (coeliac)" may constitute health data under Article 9 GDPR. It is optional, the app is fully usable without it, and we process it primarily to produce the plan you requested, on the basis of your explicit consent (Art. 9(2)(a) GDPR). Two traces persist and we name both: the stored plan carries the general labelling warning described below, and the generated recipe enters the recipe library together with the dietary settings active at the time — there <strong>with no link to your device whatsoever</strong>. We do not analyse health-related settings for usage statistics. It is sent to Anthropic to generate the plan <strong>without any device identifier attached</strong>. The plan stored on our server carries a general labelling warning for any allergy setting, which shows that such a setting was used but not which one. Schlaukorb is not a medical device; always check the packaging if you have an allergy or intolerance.</p>
 
   <h3>Processors</h3>
-  <p>Railway (hosting, EU region), RevenueCat (subscriptions), Anthropic (plan generation), OpenAI (audio transcription, only when you import a recipe video), Expo with Apple and Google (push delivery), Resend (forwarding your feedback to us), Apple and Google (payments and distribution), GitHub Pages (this website). All act on our instructions under Article 28 GDPR. Transfers to the United States rely on the EU Commission's Standard Contractual Clauses or, where the provider is certified, the EU-US Data Privacy Framework.</p>
+  <p>Railway (hosting, EU region), RevenueCat (subscriptions, plus your partner code where you entered one), Anthropic (meal plans and recipes — including your exclusions, your pantry entries and up to 30 titles of dishes recently suggested to your device; and on a recipe import also the caption, the transcribed audio and up to 8 video stills or 10 carousel images, in every case without a device identifier), OpenAI (transcribing the audio of an imported recipe video), Expo with Apple and Google (push delivery), Resend (forwarding your feedback to us), Apple and Google (payments and distribution), GitHub Pages (this website). All act on our instructions under Article 28 GDPR. On a recipe import our server also fetches the post from the platform you linked (e.g. TikTok or Instagram), which learns that our server requested it; your device identifier is not sent. Transfers to the United States rely on the EU Commission's Standard Contractual Clauses or, where the provider is certified, the EU-US Data Privacy Framework; a copy of the safeguards is available on request.</p>
 
   <h3>What we do not do</h3>
-  <p>No ad networks, no advertising identifiers, no third-party analytics or tracking SDKs, no sale of data, no access to contacts, photos, microphone or camera, no GPS, no automated decision-making with legal effect, and no handling of payment details.</p>
+  <p>No ad networks, no advertising identifiers, no third-party analytics or tracking SDKs, no sale of data, no access to contacts, photos, microphone or camera, no GPS, no automated decision-making with legal or similarly significant effect, and no handling of payment details.</p>
 
   <h3>Retention</h3>
-  <p>Usage events: 12 months. Push tokens: removed after 60 days of inactivity. Plans, lists and favourites: until you delete them or request deletion. Subscription data: for the term of the subscription plus statutory retention periods. Feedback: up to 24 months. Server logs: around 30 days.</p>
+  <p>Usage events: 12 months. Push tokens: removed after 60 days of inactivity. Meal plans on the server: the 30 most recent per device, older ones deleted automatically; deleting a plan in the app removes only the copy on your device, and we delete the server copy on request. Favourites, price alerts and shared lists: until you remove them or request deletion. Subscription data: for the term of the subscription plus statutory retention periods. Feedback: up to 24 months. Dish history: 12 weeks. Recipe library: permanently, with no link to any person or device. Invitation data — the link between the inviting and invited device, the code, the redemption time and the stored IP — is kept as the record of free months already granted; we remove it on request. Partner-code attribution: for the commission accounting and the statutory tax retention periods that follow. The IPs recorded on a first free recipe swap and on an invitation redemption are not deleted automatically; we remove them on request. Server logs are managed by our host Railway and removed automatically after a short period under their rules.</p>
+
+  <h3>Do you have to provide this data?</h3>
+  <p>There is no statutory obligation to give us anything. Only the device identifier is contractually necessary — without it the app cannot run, because your plans and any subscription could not be matched to you; it is created automatically on first launch. Everything else is voluntary. Without a federal state or postal code we show a broader flyer edition that fits your stores less precisely. Without dietary settings, favourites, price alerts, notifications or recipe import, only those features are unavailable. You suffer no other disadvantage.</p>
 
   <h3>Your rights and how to exercise them</h3>
   <p>You have the rights of access, rectification, erasure, restriction, portability and objection under Articles 15–21 GDPR, and you may withdraw consent at any time. You may also lodge a complaint with a supervisory authority; ours is the Data Protection Commissioner of North Rhine-Westphalia, Kavalleriestraße 2–4, 40213 Düsseldorf, Germany.</p>
