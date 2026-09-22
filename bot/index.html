@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>SchlaukorbBot – Informationen für Website-Betreiber</title>
+  <meta name="description" content="Was der SchlaukorbBot abruft, wie oft, und wie Sie ihn jederzeit ausschließen können." />
+  <style>
+    body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; max-width: 800px; margin: 0 auto; padding: 24px 16px; color: #1a1a1a; line-height: 1.6; }
+    h1 { color: #10B981; }
+    h2 { margin-top: 32px; }
+    a { color: #10B981; }
+    code, pre { background: #F3F4F6; border-radius: 6px; }
+    code { padding: 2px 5px; font-size: 0.95em; }
+    pre { padding: 12px 14px; overflow-x: auto; }
+    table { border-collapse: collapse; width: 100%; margin-top: 8px; }
+    th, td { text-align: left; padding: 8px 6px; border-bottom: 1px solid #E5E7EB; vertical-align: top; }
+    th { font-size: 0.85em; text-transform: uppercase; letter-spacing: .04em; color: #6B7280; }
+    .lead { font-size: 1.05em; }
+    .en { margin-top: 40px; padding-top: 24px; border-top: 1px solid #E5E7EB; color: #374151; }
+  </style>
+</head>
+<body>
+  <p><a href="/">&larr; Zurück zu Schlaukorb</a></p>
+  <h1>SchlaukorbBot</h1>
+
+  <p class="lead">
+    Diese Seite richtet sich an Website-Betreiber, die <code>SchlaukorbBot</code>
+    in ihren Server-Logs sehen. Sie erklärt, wer wir sind, was der Bot abruft und
+    wie Sie ihn jederzeit ausschließen können.
+  </p>
+
+  <h2>Wer wir sind</h2>
+  <p>
+    <a href="https://schlaukorb.app">Schlaukorb</a> ist eine deutsche App, mit der
+    Menschen ihren Wocheneinkauf entlang der aktuellen Angebote planen. Aus den
+    Angeboten entstehen Rezeptvorschläge und eine fertige Einkaufsliste – die
+    Nutzerinnen und Nutzer gehen damit in den Markt. Wir verkaufen selbst nichts
+    und stehen zu keinem Händler im Wettbewerb.
+  </p>
+
+  <h2>Kennung</h2>
+  <pre>Mozilla/5.0 (compatible; SchlaukorbBot/1.0; +https://schlaukorb.app/bot)</pre>
+  <p>
+    Wir treten immer unter dieser Kennung auf. Wir geben uns nicht als Browser
+    einer anderen Seite aus, verwenden keine wechselnden Kennungen und leiten
+    unsere Anfragen nicht über fremde Adressen um.
+  </p>
+
+  <h2>Was der Bot abruft</h2>
+  <table>
+    <tr><th>Umfang</th><td>Ausschließlich öffentlich zugängliche Angebots- und Prospektseiten. Keine Anmeldebereiche, keine Bestellwege, keine personenbezogenen Daten.</td></tr>
+    <tr><th>Häufigkeit</th><td>In der Regel ein Durchlauf pro Woche, wenn der neue Prospekt erscheint. Wenige Seitenaufrufe mit Pausen dazwischen.</td></tr>
+    <tr><th>Last</th><td>Wir begrenzen uns selbst und rufen Seiten nacheinander statt parallel ab. Wenn unser Bot bei Ihnen auffällt, ist etwas falsch – bitte melden Sie sich.</td></tr>
+    <tr><th>robots.txt</th><td>Wird bei jedem Durchlauf gelesen und befolgt.</td></tr>
+  </table>
+
+  <h2>So schließen Sie uns aus</h2>
+  <p>Ein Eintrag in Ihrer <code>robots.txt</code> genügt. Er wirkt ab dem nächsten Durchlauf:</p>
+  <pre>User-agent: SchlaukorbBot
+Disallow: /</pre>
+  <p>
+    Einzelne Bereiche sperren Sie genauso, zum Beispiel:
+  </p>
+  <pre>User-agent: SchlaukorbBot
+Disallow: /suche/</pre>
+  <p>
+    Sie müssen uns dafür nicht technisch blockieren und uns nicht schreiben.
+    Wenn Sie es lieber persönlich klären möchten, sind wir aber gern erreichbar –
+    und wenn Sie Ihre Angebote ohnehin als Datenschnittstelle bereitstellen,
+    nutzen wir lieber diese als Ihre Seiten.
+  </p>
+
+  <h2>Kontakt</h2>
+  <p>
+    E-Mail: <a href="mailto:hallo@schlaukorb.de">hallo@schlaukorb.de</a><br />
+    Verantwortlich: Gerret Schnock, Feldblick 20, 40880 Ratingen –
+    vollständige Angaben im <a href="/impressum/">Impressum</a>.
+  </p>
+  <p>
+    Bei Fragen zur Last, zur Häufigkeit oder zu einzelnen Abrufen melden Sie sich
+    bitte direkt. Wir antworten und passen an.
+  </p>
+
+  <div class="en">
+    <h2>In English</h2>
+    <p>
+      <strong>SchlaukorbBot</strong> is the crawler of
+      <a href="https://schlaukorb.app">Schlaukorb</a>, a German shopping-list app
+      that helps people plan their weekly groceries around current supermarket
+      offers. It fetches only publicly accessible offer and leaflet pages,
+      typically once a week, at a deliberately low rate, and it reads and obeys
+      <code>robots.txt</code> on every run. It always identifies itself as
+      <code>SchlaukorbBot/1.0</code> and never disguises its origin.
+      To exclude it, add <code>User-agent: SchlaukorbBot</code> /
+      <code>Disallow: /</code> to your robots.txt, or write to
+      <a href="mailto:hallo@schlaukorb.de">hallo@schlaukorb.de</a>.
+    </p>
+  </div>
+</body>
+</html>
