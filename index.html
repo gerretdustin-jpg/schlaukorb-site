@@ -8,11 +8,14 @@
        token when you add the property, replace this value with that one. -->
   <meta name="google-site-verification" content="t03QngFmlQ8K0OuAqwsbcDEOfEmbn-rM_YW1EUQE7S0" />
   <title>Schlaukorb – App für Supermarkt-Angebote &amp; Wochenplan (Lidl, Aldi, REWE, Edeka)</title>
-  <meta name="description" content="Schlaukorb zeigt dir jede Woche alle Supermarkt-Angebote für dein Bundesland – mit günstigen Rezepten und smarter Einkaufsliste. Kostenlos starten, Plus optional." />
-  <meta property="og:title" content="Schlaukorb – Schlau sparen. Schlau kochen. Schlau planen." />
-  <meta property="og:description" content="Alle Supermarkt-Angebote, Rezepte & Einkaufsliste in einem Korb. Kostenlos starten – für iOS & Android." />
+  <meta name="description" content="Die Angebote von 15 Supermärkten in deiner Region, daraus ein günstiger KI-Wochenplan mit Rezepten und Einkaufsliste. Kostenlos für iPhone und Android." />
+  <link rel="canonical" href="https://schlaukorb.app/" />
+  <meta name="theme-color" content="#10B981" />
+  <meta property="og:title" content="Schlaukorb – Supermarkt-Angebote &amp; KI-Wochenplan" />
+  <meta property="og:description" content="Die Angebote von 15 Supermärkten in deiner Region, daraus ein günstiger Wochenplan mit Rezepten und Einkaufsliste. Für iPhone und Android." />
   <meta property="og:type" content="website" />
-  <meta property="og:url" content="https://schlaukorb.app" />
+  <meta property="og:url" content="https://schlaukorb.app/" />
+  <meta property="og:locale" content="de_DE" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,600;12..96,800&display=swap" rel="stylesheet" />
   <style>
@@ -24,13 +27,14 @@
       display: flex; flex-direction: column;
     }
     main {
-      flex: 1; display: flex; flex-direction: column;
+      min-height: 88vh; display: flex; flex-direction: column;
       align-items: center; justify-content: center;
       text-align: center; padding: 48px 20px;
     }
     .logo { font-size: 64px; line-height: 1; }
     h1 { font-size: 44px; font-weight: 800; letter-spacing: -1px; margin: 16px 0 8px; }
-    .tagline { font-size: 20px; font-weight: 600; opacity: 0.95; margin-bottom: 28px; }
+    .tagline { font-size: 20px; font-weight: 600; opacity: 0.95; margin-bottom: 16px; }
+    .intro { max-width: 620px; font-size: 18px; line-height: 1.5; opacity: 0.95; margin-bottom: 28px; }
     .features {
       display: flex; gap: 12px; flex-wrap: wrap; justify-content: center;
       margin-bottom: 36px;
@@ -55,21 +59,68 @@
     .stores { margin-top: 36px; font-size: 14px; opacity: 0.85; }
     .ratgeber-link { margin-top: 20px; font-size: 16px; }
     .ratgeber-link a { color: #fff; font-weight: 700; text-decoration: underline; }
+
+    .content { background: #fff; color: #0B1F18; }
+    .wrap { max-width: 760px; margin: 0 auto; padding: 56px 20px 64px; }
+    .content h2 { font-size: 30px; font-weight: 800; letter-spacing: -0.5px; margin: 48px 0 16px; }
+    .content h2:first-child { margin-top: 0; }
+    .content h3 { font-size: 19px; font-weight: 700; margin: 22px 0 6px; }
+    .content p, .content li { font-size: 17px; line-height: 1.6; color: #22352D; }
+    .content a { color: #047857; font-weight: 700; }
+    .steps { list-style: none; counter-reset: step; display: grid; gap: 12px; }
+    .steps li {
+      counter-increment: step; position: relative;
+      background: #F0FAF5; border-radius: 16px; padding: 16px 18px 16px 62px;
+    }
+    .steps li::before {
+      content: counter(step); position: absolute; left: 16px; top: 15px;
+      width: 32px; height: 32px; border-radius: 50%;
+      background: #10B981; color: #fff; font-weight: 800; font-size: 16px;
+      display: flex; align-items: center; justify-content: center;
+    }
+    .chains { list-style: none; display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 16px; }
+    .chains li {
+      background: #F0FAF5; border: 1px solid #CDEEDD; border-radius: 999px;
+      padding: 6px 14px; font-size: 15px; font-weight: 600; color: #0B1F18;
+    }
+    .plans { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 14px; }
+    .plan { border: 1px solid #DCEFE5; border-radius: 18px; padding: 20px 22px; }
+    .plan.plus { border: 2px solid #10B981; box-shadow: 0 8px 24px rgba(16,185,129,0.12); }
+    .plan h3 { margin-top: 0; }
+    .plan .price { font-weight: 700; color: #0B1F18; margin-bottom: 10px; }
+    .plan ul { padding-left: 20px; }
+    .plan .note { margin-top: 10px; font-size: 15px; color: #047857; font-weight: 600; }
+    .more { margin-top: 32px; }
+    .cta-bottom { text-align: center; margin-top: 48px; }
+    .cta-bottom p { margin-bottom: 18px; font-weight: 600; }
+
     footer {
       padding: 20px; text-align: center; font-size: 13px;
       background: rgba(0,0,0,0.12);
     }
     footer a { color: #fff; text-decoration: underline; opacity: 0.9; margin: 0 10px; }
-    @media (max-width: 480px) { h1 { font-size: 34px; } .tagline { font-size: 17px; } }
+    @media (max-width: 480px) {
+      h1 { font-size: 34px; } .tagline { font-size: 17px; } .intro { font-size: 16px; }
+      .content h2 { font-size: 25px; } .wrap { padding: 44px 16px 52px; }
+    }
   </style>
   <script type="application/ld+json">{"@context": "https://schema.org", "@type": "MobileApplication", "name": "Schlaukorb", "alternateName": "Schlaukorb: Angebote & Sparen", "operatingSystem": "iOS, Android", "applicationCategory": "ShoppingApplication", "inLanguage": "de-DE", "url": "https://schlaukorb.app/", "description": "Schlaukorb zeigt jede Woche die Supermarkt-Angebote von 15 Ketten (Lidl, Aldi Nord, Aldi Süd, REWE, Edeka, Kaufland, Penny, Netto, Globus, HIT, Marktkauf, Netto Nord, tegut, Combi, Famila) für dein Bundesland und erstellt mit KI einen günstigen Wochenplan mit Rezepten und Einkaufsliste aus diesen Angeboten.", "offers": [{"@type": "Offer", "price": "0", "priceCurrency": "EUR", "name": "Kostenlos"}, {"@type": "Offer", "price": "7.49", "priceCurrency": "EUR", "name": "Schlaukorb Plus (Monat)"}, {"@type": "Offer", "price": "39.99", "priceCurrency": "EUR", "name": "Schlaukorb Plus (Jahr)"}], "downloadUrl": ["https://apps.apple.com/de/app/id6763761390", "https://play.google.com/store/apps/details?id=com.gert31.korbly"], "areaServed": "DE"}</script>
-  <script type="application/ld+json">{"@context": "https://schema.org", "@type": "Organization", "name": "Schlaukorb", "url": "https://schlaukorb.app/", "email": "hallo@schlaukorb.app"}</script>
+  <script type="application/ld+json">{"@context": "https://schema.org", "@type": "Organization", "name": "Schlaukorb", "url": "https://schlaukorb.app/", "email": "hallo@schlaukorb.app", "sameAs": ["https://www.tiktok.com/@schlaukorb"]}</script>
+  <script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [
+    {"@type": "Question", "name": "Ist Schlaukorb kostenlos?", "acceptedAnswer": {"@type": "Answer", "text": "Ja. Die Angebote, die Suche, Favoriten, die Einkaufsliste und ein Wochenplan pro Woche sind kostenlos. Schlaukorb Plus kostet 7,49 € im Monat oder 39,99 € im Jahr. Plus bringt unbegrenzt viele Wochenpläne, Preisalarme und den vollen Preisverlauf und lässt sich 7 Tage kostenlos testen."}},
+    {"@type": "Question", "name": "Welche Supermärkte sind in Schlaukorb?", "acceptedAnswer": {"@type": "Answer", "text": "15 Ketten: Lidl, Aldi Nord, Aldi Süd, REWE, Edeka, Kaufland, Penny, Netto, Globus, HIT, Marktkauf, Netto Nord, tegut, Combi und Famila. Du siehst jeweils die Märkte und Angebote, die in deiner Region gelten."}},
+    {"@type": "Question", "name": "Wie entsteht der Wochenplan?", "acceptedAnswer": {"@type": "Answer", "text": "Die KI wählt Gerichte, deren Zutaten diese Woche in deinen Märkten im Angebot sind. Sie richtet sich nach deinem Budget, der Zahl der Personen und deiner Ernährung, zum Beispiel vegetarisch oder vegan. Dazu bekommst du die Rezepte und eine Einkaufsliste mit Preisen."}},
+    {"@type": "Question", "name": "Brauche ich ein Konto?", "acceptedAnswer": {"@type": "Answer", "text": "Nein. Bundesland oder Postleitzahl reichen, damit Schlaukorb die richtigen Angebote zeigt."}},
+    {"@type": "Question", "name": "Was ist der Unterschied zu Prospekt-Apps wie kaufDA oder marktguru?", "acceptedAnswer": {"@type": "Answer", "text": "Prospekt-Apps zeigen dir die Prospekte vieler Händler zum Durchblättern. Schlaukorb macht aus den Angeboten deiner Märkte einen Plan: was du diese Woche kochst und was du dafür wo kaufst."}},
+    {"@type": "Question", "name": "Für welche Geräte gibt es Schlaukorb?", "acceptedAnswer": {"@type": "Answer", "text": "Für iPhone im App Store und für Android bei Google Play."}}
+  ]}</script>
 </head>
 <body>
   <main>
     <div class="logo">🛒🦊</div>
     <h1>Schlaukorb</h1>
     <p class="tagline">Schlau sparen. Schlau kochen. Schlau planen.</p>
+    <p class="intro">Schlaukorb ist eine App für iPhone und Android. Sie zeigt dir jede Woche die Angebote von 15 Supermarkt-Ketten in deiner Region und macht daraus auf Wunsch einen günstigen Wochenplan mit Rezepten und Einkaufsliste.</p>
 
     <div class="features">
       <span class="chip">🔥 Alle Wochenangebote</span>
@@ -95,12 +146,85 @@
     <p class="ratgeber-link"><a href="/ratgeber/beste-apps-supermarkt-angebote-sparen/">Welche App spart beim Einkaufen? Der Vergleich →</a></p>
   </main>
 
+  <section class="content">
+    <div class="wrap">
+      <h2>So funktioniert Schlaukorb</h2>
+      <ol class="steps">
+        <li><strong>Region und Märkte wählen.</strong> Gib dein Bundesland oder deine Postleitzahl ein und wähle die Supermärkte, in denen du einkaufst. Ein Konto brauchst du nicht.</li>
+        <li><strong>Angebote sehen oder planen lassen.</strong> Schlaukorb sortiert die Angebote der Woche nach Warengruppe und Preis pro Kilo. Auf Wunsch baut die KI daraus einen Wochenplan, passend zu deinem Budget, der Zahl der Personen und deiner Ernährung.</li>
+        <li><strong>Mit der Liste einkaufen.</strong> Die Einkaufsliste zeigt dir, was du in welchem Markt kaufst und was es kostet.</li>
+      </ol>
+
+      <h2>Diese Supermärkte sind dabei</h2>
+      <ul class="chains">
+        <li>Lidl</li><li>Aldi Nord</li><li>Aldi Süd</li><li>REWE</li><li>Edeka</li>
+        <li>Kaufland</li><li>Penny</li><li>Netto</li><li>Globus</li><li>HIT</li>
+        <li>Marktkauf</li><li>Netto Nord</li><li>tegut</li><li>Combi</li><li>Famila</li>
+      </ul>
+      <p>Du siehst nur die Märkte, die es in deiner Region gibt, und nur die Angebote, die dort gelten. Schlaukorb liest die Angebote jede Woche neu aus den aktuellen Prospekten ein.</p>
+
+      <h2>Kostenlos oder mit Plus</h2>
+      <div class="plans">
+        <div class="plan">
+          <h3>Kostenlos</h3>
+          <p class="price">0 €</p>
+          <ul>
+            <li>Alle Angebote der Woche</li>
+            <li>Suche und Favoriten</li>
+            <li>Einkaufsliste</li>
+            <li>1 Wochenplan pro Woche</li>
+          </ul>
+        </div>
+        <div class="plan plus">
+          <h3>Schlaukorb Plus</h3>
+          <p class="price">7,49 € im Monat oder 39,99 € im Jahr</p>
+          <ul>
+            <li>Unbegrenzt viele Wochenpläne</li>
+            <li>Preisalarme</li>
+            <li>Voller Preisverlauf</li>
+          </ul>
+          <p class="note">7 Tage kostenlos testen</p>
+        </div>
+      </div>
+
+      <h2>Häufige Fragen</h2>
+      <h3>Ist Schlaukorb kostenlos?</h3>
+      <p>Ja. Die Angebote, die Suche, Favoriten, die Einkaufsliste und ein Wochenplan pro Woche sind kostenlos. Schlaukorb Plus kostet 7,49 € im Monat oder 39,99 € im Jahr. Plus bringt unbegrenzt viele Wochenpläne, Preisalarme und den vollen Preisverlauf und lässt sich 7 Tage kostenlos testen.</p>
+      <h3>Welche Supermärkte sind in Schlaukorb?</h3>
+      <p>15 Ketten: Lidl, Aldi Nord, Aldi Süd, REWE, Edeka, Kaufland, Penny, Netto, Globus, HIT, Marktkauf, Netto Nord, tegut, Combi und Famila. Du siehst jeweils die Märkte und Angebote, die in deiner Region gelten.</p>
+      <h3>Wie entsteht der Wochenplan?</h3>
+      <p>Die KI wählt Gerichte, deren Zutaten diese Woche in deinen Märkten im Angebot sind. Sie richtet sich nach deinem Budget, der Zahl der Personen und deiner Ernährung, zum Beispiel vegetarisch oder vegan. Dazu bekommst du die Rezepte und eine Einkaufsliste mit Preisen.</p>
+      <h3>Brauche ich ein Konto?</h3>
+      <p>Nein. Bundesland oder Postleitzahl reichen, damit Schlaukorb die richtigen Angebote zeigt.</p>
+      <h3>Was ist der Unterschied zu Prospekt-Apps wie kaufDA oder marktguru?</h3>
+      <p>Prospekt-Apps zeigen dir die Prospekte vieler Händler zum Durchblättern. Schlaukorb macht aus den Angeboten deiner Märkte einen Plan: was du diese Woche kochst und was du dafür wo kaufst. Mehr dazu im <a href="/ratgeber/beste-apps-supermarkt-angebote-sparen/">Vergleich der Spar-Apps</a>.</p>
+      <h3>Für welche Geräte gibt es Schlaukorb?</h3>
+      <p>Für iPhone im App Store und für Android bei Google Play.</p>
+
+      <p class="more">Tipps mit echten Preisen findest du im <a href="/ratgeber/">Schlaukorb-Ratgeber</a>, zum Beispiel <a href="/ratgeber/wochenplan-erstellen-budget/">Wochenplan mit Budget erstellen</a> oder <a href="/ratgeber/beim-wocheneinkauf-sparen/">beim Wocheneinkauf sparen</a>.</p>
+
+      <div class="cta-bottom">
+        <p>Jetzt kostenlos laden</p>
+        <div class="badges">
+          <a class="badge" href="https://play.google.com/store/apps/details?id=com.gert31.korbly">
+            <span class="icon">▶</span>
+            <span><span class="small">JETZT BEI</span><span class="big">Google Play</span></span>
+          </a>
+          <a class="badge" href="https://apps.apple.com/de/app/id6763761390">
+            <span class="icon"></span>
+            <span><span class="small">LADEN IM</span><span class="big">App Store</span></span>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
   <footer>
     <a href="/ratgeber/">Ratgeber</a>
     <a href="/impressum/">Impressum</a>
     <a href="/datenschutz/">Datenschutz</a>
     <a href="/nutzungsbedingungen/">Nutzungsbedingungen</a>
-    <a href="mailto:hallo@schlaukorb.de">hallo@schlaukorb.de</a>
+    <a href="mailto:hallo@schlaukorb.app">hallo@schlaukorb.app</a>
     <div style="margin-top:8px; opacity:0.7;">© 2026 Schlaukorb</div>
   </footer>
 </body>
